@@ -1,0 +1,33 @@
+[1.674s] Invoking command in '/home/noah/parallel_ws/src/parallelbot_interfaces': PYTHONPATH=/home/noah/parallel_ws/build/parallelbot_interfaces/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/noah/parallel_ws/install/parallelbot_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/parallelbot_interfaces build --build-base /home/noah/parallel_ws/build/parallelbot_interfaces/build install --record /home/noah/parallel_ws/build/parallelbot_interfaces/install.log --single-version-externally-managed install_data
+[2.086s] running egg_info
+[2.086s] creating ../../build/parallelbot_interfaces/parallelbot_interfaces.egg-info
+[2.119s] writing ../../build/parallelbot_interfaces/parallelbot_interfaces.egg-info/PKG-INFO
+[2.119s] writing dependency_links to ../../build/parallelbot_interfaces/parallelbot_interfaces.egg-info/dependency_links.txt
+[2.119s] writing requirements to ../../build/parallelbot_interfaces/parallelbot_interfaces.egg-info/requires.txt
+[2.120s] writing top-level names to ../../build/parallelbot_interfaces/parallelbot_interfaces.egg-info/top_level.txt
+[2.120s] writing manifest file '../../build/parallelbot_interfaces/parallelbot_interfaces.egg-info/SOURCES.txt'
+[2.186s] reading manifest file '../../build/parallelbot_interfaces/parallelbot_interfaces.egg-info/SOURCES.txt'
+[2.186s] adding license file 'LICENSE'
+[2.187s] writing manifest file '../../build/parallelbot_interfaces/parallelbot_interfaces.egg-info/SOURCES.txt'
+[2.187s] running build
+[2.187s] running build_py
+[2.187s] creating /home/noah/parallel_ws/build/parallelbot_interfaces/build
+[2.188s] creating /home/noah/parallel_ws/build/parallelbot_interfaces/build/lib
+[2.188s] creating /home/noah/parallel_ws/build/parallelbot_interfaces/build/lib/parallelbot_interfaces
+[2.188s] copying parallelbot_interfaces/__init__.py -> /home/noah/parallel_ws/build/parallelbot_interfaces/build/lib/parallelbot_interfaces
+[2.188s] running install
+[2.201s] running install_lib
+[2.252s] creating /home/noah/parallel_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces
+[2.253s] copying /home/noah/parallel_ws/build/parallelbot_interfaces/build/lib/parallelbot_interfaces/__init__.py -> /home/noah/parallel_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces
+[2.253s] byte-compiling /home/noah/parallel_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/__init__.py to __init__.cpython-312.pyc
+[2.254s] running install_data
+[2.254s] creating /home/noah/parallel_ws/install/parallelbot_interfaces/share/ament_index
+[2.254s] creating /home/noah/parallel_ws/install/parallelbot_interfaces/share/ament_index/resource_index
+[2.255s] creating /home/noah/parallel_ws/install/parallelbot_interfaces/share/ament_index/resource_index/packages
+[2.255s] copying resource/parallelbot_interfaces -> /home/noah/parallel_ws/install/parallelbot_interfaces/share/ament_index/resource_index/packages
+[2.255s] copying package.xml -> /home/noah/parallel_ws/install/parallelbot_interfaces/share/parallelbot_interfaces
+[2.255s] running install_egg_info
+[2.316s] Copying ../../build/parallelbot_interfaces/parallelbot_interfaces.egg-info to /home/noah/parallel_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces-0.0.0-py3.12.egg-info
+[2.318s] running install_scripts
+[2.619s] writing list of installed files to '/home/noah/parallel_ws/build/parallelbot_interfaces/install.log'
+[2.690s] Invoked command in '/home/noah/parallel_ws/src/parallelbot_interfaces' returned '0': PYTHONPATH=/home/noah/parallel_ws/build/parallelbot_interfaces/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/noah/parallel_ws/install/parallelbot_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/parallelbot_interfaces build --build-base /home/noah/parallel_ws/build/parallelbot_interfaces/build install --record /home/noah/parallel_ws/build/parallelbot_interfaces/install.log --single-version-externally-managed install_data

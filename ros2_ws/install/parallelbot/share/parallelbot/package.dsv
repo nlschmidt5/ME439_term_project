@@ -1,0 +1,4 @@
+source;share/parallelbot/hook/pythonpath.dsv
+source;share/parallelbot/hook/pythonpath.sh
+source;share/parallelbot/hook/ament_prefix_path.dsv
+source;share/parallelbot/hook/ament_prefix_path.sh

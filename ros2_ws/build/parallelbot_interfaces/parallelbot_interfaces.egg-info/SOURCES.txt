@@ -1,0 +1,15 @@
+LICENSE
+package.xml
+setup.cfg
+setup.py
+../../build/parallelbot_interfaces/parallelbot_interfaces.egg-info/PKG-INFO
+../../build/parallelbot_interfaces/parallelbot_interfaces.egg-info/SOURCES.txt
+../../build/parallelbot_interfaces/parallelbot_interfaces.egg-info/dependency_links.txt
+../../build/parallelbot_interfaces/parallelbot_interfaces.egg-info/requires.txt
+../../build/parallelbot_interfaces/parallelbot_interfaces.egg-info/top_level.txt
+../../build/parallelbot_interfaces/parallelbot_interfaces.egg-info/zip-safe
+parallelbot_interfaces/__init__.py
+resource/parallelbot_interfaces
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
