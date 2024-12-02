@@ -42,17 +42,14 @@ def calc_FK(self, theta):
     B=1/L2**2*(2*R1*R2*sin(theta2) - 2*L1*R2*sin(theta1))
     C=1/L2**2*(L1**2 + R1**2 + R2**2 + b**2 + 2*b*R1*cos(theta2) - 2*b*L1*cos(theta1) - 2*L1*R1*cos(theta2-theta1))-1
 
-    theta4a=2*atan2( (-B+sqrt(B**2-(C-A)*(A+C))) , (C-A) ) # first solution to quadratic eqn
-    theta4b=2*atan2( (-B-sqrt(B**2-(C-A)*(A+C))) , (C-A) ) # second solution to quadratic eqn
-    theta4c=2*pi+2*atan2( (-B+sqrt(B**2-(C-A)*(A+C))) , (C-A) ) 
-    theta4d=2*pi+2*atan2( (-B-sqrt(B**2-(C-A)*(A+C))) , (C-A) ) # this one is correct! not sure why this is the one that works, but it is
-
-    theta4=theta4d
+    theta4=2*pi+2*atan2( (-B-sqrt(B**2-(C-A)*(A+C))) , (C-A) )
     xee= b + R1*cos(theta2) + R2*cos(theta4) + E*cos(theta4)
     yee= R1*sin(theta2) + R2*sin(theta4) + E*sin(theta4)
-
-
-    
+    pos=PB_endpoint
+    pos.x=xee
+    pos.y=yee
+    self.pub_FK.publish(pos)
+   
 
 
 def calc_IK(self, theta):
