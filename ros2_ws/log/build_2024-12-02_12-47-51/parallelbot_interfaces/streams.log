@@ -1,0 +1,58 @@
+[0.018s] Invoking command in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot_interfaces -DCMAKE_INSTALL_PREFIX=/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces
+[0.043s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.387s] -- Found example_interfaces: 0.12.0 (/opt/ros/jazzy/share/example_interfaces/cmake)
+[0.420s] -- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.432s] -- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.444s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.461s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.609s] -- Found geometry_msgs: 5.3.5 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[0.667s] -- Found sensor_msgs: 5.3.5 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[0.695s] -- Found nav_msgs: 5.3.5 (/opt/ros/jazzy/share/nav_msgs/cmake)
+[0.728s] -- Found map_msgs: 2.4.1 (/opt/ros/jazzy/share/map_msgs/cmake)
+[0.766s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.775s] -- Found rosidl_adapter: 4.6.4 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.113s] [31mCMake Error at /opt/ros/jazzy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:57 (message):
+[1.114s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name
+[1.114s]   xarmrob_interfaces --arguments-file
+[1.114s]   /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces/rosidl_adapter__arguments__xarmrob_interfaces.json
+[1.114s]   --output-dir
+[1.114s]   /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces/rosidl_adapter/xarmrob_interfaces
+[1.114s]   --output-file
+[1.115s]   /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces/rosidl_adapter/xarmrob_interfaces.idls)
+[1.115s]   returned error code 1:
+[1.115s] 
+[1.115s]   Traceback (most recent call last):
+[1.115s] 
+[1.115s]     File "<frozen runpy>", line 198, in _run_module_as_main
+[1.116s]     File "<frozen runpy>", line 88, in _run_code
+[1.116s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[1.116s]       sys.exit(main())
+[1.116s]                ^^^^^^
+[1.116s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/main.py", line 53, in main
+[1.116s]       abs_idl_file = convert_to_idl(
+[1.117s]                      ^^^^^^^^^^^^^^^
+[1.117s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[1.117s]       return convert_msg_to_idl(
+[1.117s]              ^^^^^^^^^^^^^^^^^^^
+[1.117s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[1.117s]       msg = parse_message_string(package_name, input_file.stem, content)
+[1.118s]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1.118s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 545, in parse_message_string
+[1.118s]       msg = MessageSpecification(pkg_name, msg_name, fields, constants)
+[1.118s]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1.118s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 389, in __init__
+[1.118s]       self.base_type = BaseType(
+[1.118s]                        ^^^^^^^^^
+[1.119s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 206, in __init__
+[1.119s]       raise InvalidResourceName(
+[1.119s] 
+[1.119s]   rosidl_adapter.parser.InvalidResourceName: 'PB_joint_angles' is an invalid
+[1.119s]   message name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$'
+[1.119s] 
+[1.120s] Call Stack (most recent call first):
+[1.120s]   /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:132 (rosidl_adapt_interfaces)
+[1.120s]   CMakeLists.txt:26 (rosidl_generate_interfaces)
+[1.120s] 
+[1.120s] [0m
+[1.120s] -- Configuring incomplete, errors occurred!
+[1.122s] Invoked command in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot_interfaces -DCMAKE_INSTALL_PREFIX=/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces

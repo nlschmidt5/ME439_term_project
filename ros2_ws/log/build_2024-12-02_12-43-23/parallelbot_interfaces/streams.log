@@ -1,0 +1,19 @@
+[1.451s] Invoking command in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot_interfaces': PYTHONPATH=/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/parallelbot_interfaces build --build-base /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces/build install --record /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces/install.log --single-version-externally-managed install_data
+[1.919s] running egg_info
+[1.949s] writing ../../build/parallelbot_interfaces/parallelbot_interfaces.egg-info/PKG-INFO
+[1.949s] writing dependency_links to ../../build/parallelbot_interfaces/parallelbot_interfaces.egg-info/dependency_links.txt
+[1.950s] writing requirements to ../../build/parallelbot_interfaces/parallelbot_interfaces.egg-info/requires.txt
+[1.950s] writing top-level names to ../../build/parallelbot_interfaces/parallelbot_interfaces.egg-info/top_level.txt
+[2.033s] reading manifest file '../../build/parallelbot_interfaces/parallelbot_interfaces.egg-info/SOURCES.txt'
+[2.033s] adding license file 'LICENSE'
+[2.034s] writing manifest file '../../build/parallelbot_interfaces/parallelbot_interfaces.egg-info/SOURCES.txt'
+[2.034s] running build
+[2.034s] running build_py
+[2.035s] running install
+[2.043s] running install_lib
+[2.081s] running install_data
+[2.082s] running install_egg_info
+[2.124s] removing '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces-0.0.0-py3.12.egg-info' (and everything under it)
+[2.124s] Copying ../../build/parallelbot_interfaces/parallelbot_interfaces.egg-info to /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces-0.0.0-py3.12.egg-info
+[2.125s] running install_scripts
+[2.326s] writing list of installed files to '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces/install.log'

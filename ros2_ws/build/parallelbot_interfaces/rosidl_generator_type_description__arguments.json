@@ -1,0 +1,13 @@
+{
+  "package_name": "parallelbot_interfaces",
+  "output_dir": "/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces/rosidl_generator_type_description/parallelbot_interfaces",
+  "idl_tuples": [
+    "/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces/rosidl_adapter/parallelbot_interfaces:msg/PBJointAngles.idl",
+    "/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces/rosidl_adapter/parallelbot_interfaces:msg/PBEndpoint.idl",
+    "/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces/rosidl_adapter/parallelbot_interfaces:msg/PBJointCommand.idl"
+  ],
+  "include_paths": [
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces",
+    "std_msgs:/opt/ros/jazzy/share/std_msgs"
+  ]
+}

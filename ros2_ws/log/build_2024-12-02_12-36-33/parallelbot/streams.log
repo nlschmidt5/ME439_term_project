@@ -1,0 +1,25 @@
+[1.779s] Invoking command in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot': PYTHONPATH=/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/parallelbot build --build-base /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot/build install --record /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot/install.log --single-version-externally-managed install_data
+[2.214s] running egg_info
+[2.251s] writing ../../build/parallelbot/parallelbot.egg-info/PKG-INFO
+[2.251s] writing dependency_links to ../../build/parallelbot/parallelbot.egg-info/dependency_links.txt
+[2.251s] writing entry points to ../../build/parallelbot/parallelbot.egg-info/entry_points.txt
+[2.251s] writing requirements to ../../build/parallelbot/parallelbot.egg-info/requires.txt
+[2.252s] writing top-level names to ../../build/parallelbot/parallelbot.egg-info/top_level.txt
+[2.313s] reading manifest file '../../build/parallelbot/parallelbot.egg-info/SOURCES.txt'
+[2.313s] adding license file 'LICENSE'
+[2.314s] writing manifest file '../../build/parallelbot/parallelbot.egg-info/SOURCES.txt'
+[2.314s] running build
+[2.314s] running build_py
+[2.314s] copying parallelbot/PB_kinematics.py -> /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot/build/lib/parallelbot
+[2.315s] running install
+[2.323s] running install_lib
+[2.366s] copying /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot/build/lib/parallelbot/PB_kinematics.py -> /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages/parallelbot
+[2.367s] byte-compiling /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages/parallelbot/PB_kinematics.py to PB_kinematics.cpython-312.pyc
+[2.369s] running install_data
+[2.370s] running install_egg_info
+[2.410s] removing '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages/parallelbot-0.0.0-py3.12.egg-info' (and everything under it)
+[2.411s] Copying ../../build/parallelbot/parallelbot.egg-info to /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages/parallelbot-0.0.0-py3.12.egg-info
+[2.413s] running install_scripts
+[2.638s] Installing PB_kinematics script to /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/parallelbot
+[2.638s] writing list of installed files to '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot/install.log'
+[2.689s] Invoked command in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot' returned '0': PYTHONPATH=/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/parallelbot build --build-base /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot/build install --record /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot/install.log --single-version-externally-managed install_data

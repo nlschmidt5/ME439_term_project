@@ -5,9 +5,12 @@ setup.py
 ../../build/parallelbot/parallelbot.egg-info/PKG-INFO
 ../../build/parallelbot/parallelbot.egg-info/SOURCES.txt
 ../../build/parallelbot/parallelbot.egg-info/dependency_links.txt
+../../build/parallelbot/parallelbot.egg-info/entry_points.txt
 ../../build/parallelbot/parallelbot.egg-info/requires.txt
 ../../build/parallelbot/parallelbot.egg-info/top_level.txt
 ../../build/parallelbot/parallelbot.egg-info/zip-safe
+parallelbot/PB_kinematics.py
+parallelbot/PB_servo_cmd.py
 parallelbot/__init__.py
 resource/parallelbot
 test/test_copyright.py

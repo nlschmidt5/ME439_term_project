@@ -1,0 +1,33 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from parallelbot_interfaces/msg/PBJointCommand.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module parallelbot_interfaces {
+  module msg {
+    @verbatim (language="comment", text=
+      "This is a message that holds data to describe the commands to a set of bus servo joints." "\n"
+      "" "\n"
+      "Each joint is uniquely identified by its name." "\n"
+      "The header specifies the time at which the commands were recorded. All the commands" "\n"
+      "in one message have to be recorded at the same time." "\n"
+      "" "\n"
+      "The command of each joint (revolute or prismatic) is defined by:" "\n"
+      "the command of the joint (int, 0 to 1000)," "\n"
+      "" "\n"
+      "The message has a boolean to determine whether it is enabled or not. " "\n"
+      "" "\n"
+      "Match the order of the names and the commands to uniquely associate the joint" "\n"
+      "names with the correct commands.")
+    struct PBJointCommand {
+      std_msgs::msg::Header header;
+
+      sequence<string> name;
+
+      sequence<int16> command;
+
+      boolean enable;
+    };
+  };
+};

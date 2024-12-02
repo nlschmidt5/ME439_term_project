@@ -3,9 +3,16 @@
 <package format="3">
   <name>parallelbot</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="noah@todo.todo">noah</maintainer>
+  <description>package for the 2dof, 5r closed kinematic chain robot used in ME 439 at UW-madison</description>
+
+  <maintainer email="nlschmidt5@wisc.edu">noah</maintainer>
   <license>Apache-2.0</license>
+  <depend>parallelbot_interfaces</depend>
+  <depend>example_interfaces</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>visualization_msgs</depend>
+  <depend>ros2launch</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>

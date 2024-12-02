@@ -1,0 +1,8 @@
+{
+  "package_name": "parallelbot_interfaces",
+  "non_idl_tuples": [
+    "/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot_interfaces:msg/PBJointAngles.msg",
+    "/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot_interfaces:msg/PBEndpoint.msg",
+    "/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot_interfaces:msg/PBJointCommand.msg"
+  ]
+}

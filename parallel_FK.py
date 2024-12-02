@@ -16,7 +16,7 @@ import numpy as np
 #   |  \
 #  _| __\
 
-# select 1 or 2 for test case, otherwise, manually define values
+# select test case, otherwise, manually define values
 configuration=4
 
 
