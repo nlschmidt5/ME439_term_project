@@ -1,0 +1,8 @@
+[31mCMake Error at /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:95 (message):
+  rosidl_generate_interfaces() the passed file 'msg/PB_joint_angles.msg'
+  doesn't exist relative to the CMAKE_CURRENT_SOURCE_DIR
+  '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot_interfaces'
+Call Stack (most recent call first):
+  CMakeLists.txt:26 (rosidl_generate_interfaces)
+
+[0m

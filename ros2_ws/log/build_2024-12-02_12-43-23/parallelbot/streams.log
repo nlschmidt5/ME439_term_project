@@ -1,0 +1,36 @@
+[0.069s] Invoking command in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces:/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot:/opt/ros/jazzy /usr/bin/cmake /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot -DCMAKE_INSTALL_PREFIX=/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot
+[0.231s] -- The C compiler identification is GNU 13.2.0
+[0.346s] -- The CXX compiler identification is GNU 13.2.0
+[0.365s] -- Detecting C compiler ABI info
+[0.552s] -- Detecting C compiler ABI info - done
+[0.567s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.568s] -- Detecting C compile features
+[0.569s] -- Detecting C compile features - done
+[0.579s] -- Detecting CXX compiler ABI info
+[0.687s] -- Detecting CXX compiler ABI info - done
+[0.705s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.705s] -- Detecting CXX compile features
+[0.706s] -- Detecting CXX compile features - done
+[0.718s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.953s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.137s] -- Found example_interfaces: 0.12.0 (/opt/ros/jazzy/share/example_interfaces/cmake)
+[1.223s] -- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.255s] -- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.282s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.315s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.450s] -- Found geometry_msgs: 5.3.5 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[1.518s] -- Found sensor_msgs: 5.3.5 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[1.556s] -- Found nav_msgs: 5.3.5 (/opt/ros/jazzy/share/nav_msgs/cmake)
+[1.597s] -- Found map_msgs: 2.4.1 (/opt/ros/jazzy/share/map_msgs/cmake)
+[1.663s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[1.688s] -- Found rosidl_adapter: 4.6.4 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.691s] [31mCMake Error at /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:95 (message):
+[1.692s]   rosidl_generate_interfaces() the passed file 'msg/PB_joint_angles.msg'
+[1.692s]   doesn't exist relative to the CMAKE_CURRENT_SOURCE_DIR
+[1.692s]   '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot'
+[1.692s] Call Stack (most recent call first):
+[1.692s]   CMakeLists.txt:26 (rosidl_generate_interfaces)
+[1.692s] 
+[1.692s] [0m
+[1.693s] -- Configuring incomplete, errors occurred!
+[1.700s] Invoked command in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces:/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot:/opt/ros/jazzy /usr/bin/cmake /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot -DCMAKE_INSTALL_PREFIX=/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot

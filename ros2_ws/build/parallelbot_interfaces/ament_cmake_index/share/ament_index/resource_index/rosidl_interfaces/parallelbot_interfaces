@@ -1,0 +1,6 @@
+msg/PBEndpoint.idl
+msg/PBEndpoint.msg
+msg/PBJointAngles.idl
+msg/PBJointAngles.msg
+msg/PBJointCommand.idl
+msg/PBJointCommand.msg

@@ -1,0 +1,77 @@
+[0.000000] (-) TimerEvent: {}
+[0.000123] (parallelbot_interfaces) JobQueued: {'identifier': 'parallelbot_interfaces', 'dependencies': OrderedDict()}
+[0.000252] (parallelbot) JobQueued: {'identifier': 'parallelbot', 'dependencies': OrderedDict({'parallelbot_interfaces': '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces'})}
+[0.000338] (parallelbot_interfaces) JobStarted: {'identifier': 'parallelbot_interfaces'}
+[0.020512] (parallelbot_interfaces) JobProgress: {'identifier': 'parallelbot_interfaces', 'progress': 'cmake'}
+[0.021603] (parallelbot_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces'], 'cwd': '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_US', 'USER': 'noah', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SEAT': 'seat0', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/noah', 'DESKTOP_SESSION': 'cinnamon', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'INSIDE_NEMO_PYTHON': '', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'noah', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': 'c2', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/noah/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/noah/.local/bin', 'SESSION_MANAGER': 'local/noah-Inspiron-7391-2n1:@/tmp/.ICE-unix/1580,unix/noah-Inspiron-7391-2n1:/tmp/.ICE-unix/1580', 'GDM_LANG': 'en_US', 'GTK3_MODULES': 'xapp-gtk3-module', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/e7c3b160_0c79_40c6_a4de_6244c087cc7f', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'X-Cinnamon', 'XDG_SESSION_DESKTOP': 'cinnamon', 'XAUTHORITY': '/home/noah/.Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.2025', 'MOZ_USE_XINPUT2': '1', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/noah', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'cinnamon', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'XDG_VTNR': '7', 'PWD': '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-cinnamon:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/cinnamon:/usr/share/gnome:/home/noah/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.047058] (parallelbot_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.099464] (-) TimerEvent: {}
+[0.199733] (-) TimerEvent: {}
+[0.284696] (parallelbot_interfaces) StdoutLine: {'line': b'-- Found example_interfaces: 0.12.0 (/opt/ros/jazzy/share/example_interfaces/cmake)\n'}
+[0.299847] (-) TimerEvent: {}
+[0.318021] (parallelbot_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.330604] (parallelbot_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.352255] (parallelbot_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.373001] (parallelbot_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.399974] (-) TimerEvent: {}
+[0.473038] (parallelbot_interfaces) StdoutLine: {'line': b'-- Found geometry_msgs: 5.3.5 (/opt/ros/jazzy/share/geometry_msgs/cmake)\n'}
+[0.500104] (-) TimerEvent: {}
+[0.512001] (parallelbot_interfaces) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.5 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[0.545085] (parallelbot_interfaces) StdoutLine: {'line': b'-- Found nav_msgs: 5.3.5 (/opt/ros/jazzy/share/nav_msgs/cmake)\n'}
+[0.576187] (parallelbot_interfaces) StdoutLine: {'line': b'-- Found map_msgs: 2.4.1 (/opt/ros/jazzy/share/map_msgs/cmake)\n'}
+[0.600221] (-) TimerEvent: {}
+[0.613439] (parallelbot_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[0.624204] (parallelbot_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.4 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[0.700346] (-) TimerEvent: {}
+[0.800600] (-) TimerEvent: {}
+[0.900911] (-) TimerEvent: {}
+[1.001300] (-) TimerEvent: {}
+[1.024603] (parallelbot_interfaces) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/jazzy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:57 (message):\n'}
+[1.025456] (parallelbot_interfaces) StderrLine: {'line': b'  execute_process(/usr/bin/python3 -m rosidl_adapter --package-name\n'}
+[1.025919] (parallelbot_interfaces) StderrLine: {'line': b'  xarmrob_interfaces --arguments-file\n'}
+[1.026356] (parallelbot_interfaces) StderrLine: {'line': b'  /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces/rosidl_adapter__arguments__xarmrob_interfaces.json\n'}
+[1.026725] (parallelbot_interfaces) StderrLine: {'line': b'  --output-dir\n'}
+[1.027039] (parallelbot_interfaces) StderrLine: {'line': b'  /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces/rosidl_adapter/xarmrob_interfaces\n'}
+[1.027319] (parallelbot_interfaces) StderrLine: {'line': b'  --output-file\n'}
+[1.027647] (parallelbot_interfaces) StderrLine: {'line': b'  /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces/rosidl_adapter/xarmrob_interfaces.idls)\n'}
+[1.027937] (parallelbot_interfaces) StderrLine: {'line': b'  returned error code 1:\n'}
+[1.028183] (parallelbot_interfaces) StderrLine: {'line': b'\n'}
+[1.028436] (parallelbot_interfaces) StderrLine: {'line': b'  Traceback (most recent call last):\n'}
+[1.028748] (parallelbot_interfaces) StderrLine: {'line': b'\n'}
+[1.028992] (parallelbot_interfaces) StderrLine: {'line': b'    File "<frozen runpy>", line 198, in _run_module_as_main\n'}
+[1.029229] (parallelbot_interfaces) StderrLine: {'line': b'    File "<frozen runpy>", line 88, in _run_code\n'}
+[1.029466] (parallelbot_interfaces) StderrLine: {'line': b'    File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/__main__.py", line 19, in <module>\n'}
+[1.029764] (parallelbot_interfaces) StderrLine: {'line': b'      sys.exit(main())\n'}
+[1.029994] (parallelbot_interfaces) StderrLine: {'line': b'               ^^^^^^\n'}
+[1.030221] (parallelbot_interfaces) StderrLine: {'line': b'    File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/main.py", line 53, in main\n'}
+[1.030447] (parallelbot_interfaces) StderrLine: {'line': b'      abs_idl_file = convert_to_idl(\n'}
+[1.030714] (parallelbot_interfaces) StderrLine: {'line': b'                     ^^^^^^^^^^^^^^^\n'}
+[1.030950] (parallelbot_interfaces) StderrLine: {'line': b'    File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl\n'}
+[1.031175] (parallelbot_interfaces) StderrLine: {'line': b'      return convert_msg_to_idl(\n'}
+[1.031416] (parallelbot_interfaces) StderrLine: {'line': b'             ^^^^^^^^^^^^^^^^^^^\n'}
+[1.031675] (parallelbot_interfaces) StderrLine: {'line': b'    File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl\n'}
+[1.031904] (parallelbot_interfaces) StderrLine: {'line': b'      msg = parse_message_string(package_name, input_file.stem, content)\n'}
+[1.032187] (parallelbot_interfaces) StderrLine: {'line': b'            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'}
+[1.032454] (parallelbot_interfaces) StderrLine: {'line': b'    File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 545, in parse_message_string\n'}
+[1.032739] (parallelbot_interfaces) StderrLine: {'line': b'      msg = MessageSpecification(pkg_name, msg_name, fields, constants)\n'}
+[1.033029] (parallelbot_interfaces) StderrLine: {'line': b'            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'}
+[1.033334] (parallelbot_interfaces) StderrLine: {'line': b'    File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 389, in __init__\n'}
+[1.033782] (parallelbot_interfaces) StderrLine: {'line': b'      self.base_type = BaseType(\n'}
+[1.034142] (parallelbot_interfaces) StderrLine: {'line': b'                       ^^^^^^^^^\n'}
+[1.034475] (parallelbot_interfaces) StderrLine: {'line': b'    File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 206, in __init__\n'}
+[1.034834] (parallelbot_interfaces) StderrLine: {'line': b'      raise InvalidResourceName(\n'}
+[1.035113] (parallelbot_interfaces) StderrLine: {'line': b'\n'}
+[1.035410] (parallelbot_interfaces) StderrLine: {'line': b"  rosidl_adapter.parser.InvalidResourceName: 'pbJointAngles' is an invalid\n"}
+[1.035753] (parallelbot_interfaces) StderrLine: {'line': b"  message name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$'\n"}
+[1.036031] (parallelbot_interfaces) StderrLine: {'line': b'\n'}
+[1.036291] (parallelbot_interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.036580] (parallelbot_interfaces) StderrLine: {'line': b'  /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:132 (rosidl_adapt_interfaces)\n'}
+[1.036860] (parallelbot_interfaces) StderrLine: {'line': b'  CMakeLists.txt:27 (rosidl_generate_interfaces)\n'}
+[1.037126] (parallelbot_interfaces) StderrLine: {'line': b'\n'}
+[1.037385] (parallelbot_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[1.037675] (parallelbot_interfaces) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.049614] (parallelbot_interfaces) CommandEnded: {'returncode': 1}
+[1.096099] (parallelbot_interfaces) JobEnded: {'identifier': 'parallelbot_interfaces', 'rc': 1}
+[1.101475] (-) TimerEvent: {}
+[1.107322] (parallelbot) JobSkipped: {'identifier': 'parallelbot'}
+[1.107455] (-) EventReactorShutdown: {}

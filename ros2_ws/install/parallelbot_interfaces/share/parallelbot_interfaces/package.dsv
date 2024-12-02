@@ -1,4 +1,10 @@
+source;share/parallelbot_interfaces/hook/cmake_prefix_path.dsv
+source;share/parallelbot_interfaces/hook/cmake_prefix_path.sh
+source;share/parallelbot_interfaces/hook/ld_library_path_lib.dsv
+source;share/parallelbot_interfaces/hook/ld_library_path_lib.sh
 source;share/parallelbot_interfaces/hook/pythonpath.dsv
 source;share/parallelbot_interfaces/hook/pythonpath.sh
-source;share/parallelbot_interfaces/hook/ament_prefix_path.dsv
-source;share/parallelbot_interfaces/hook/ament_prefix_path.sh
+source;share/parallelbot_interfaces/local_setup.bash
+source;share/parallelbot_interfaces/local_setup.dsv
+source;share/parallelbot_interfaces/local_setup.sh
+source;share/parallelbot_interfaces/local_setup.zsh

@@ -28,6 +28,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+        'PB_kinematics=parallelbot.PB_kinematics:main'
         ],
     },
 )
