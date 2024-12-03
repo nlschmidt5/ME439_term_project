@@ -49,6 +49,7 @@ class PB_kinematics(Node):
         yee= R1*sin(theta2) + R2*sin(theta4) + E*sin(theta4)
         self.endpoint.x=xee
         self.endpoint.y=yee
+        self.get_logger().info("FK - publishing endpoint: x: "+ str(self.endpoint.x) +"y: "+str(self.endpoint.y))
         self.pub_FK.publish(self.endpoint)
     
 
@@ -89,6 +90,7 @@ class PB_kinematics(Node):
         self.theta.theta2=theta2
         self.theta.theta3=theta3
         self.theta.theta4=theta4
+        self.get_logger().info("IK - publishing angles: x: "+ str(self.theta.theta1) +"y: "+str(self.theta.theta2))
         self.pub_IK.publish(self.theta)
 
 def main(args=None):
