@@ -14,7 +14,8 @@ L1,L2,R1,R2,b,E=pbm.loadconfig(config)
 t=np.linspace(0, 2*np.pi, 90)
 x=20*np.cos(t)-20
 y=20*np.sin(t)+140
-
+# x=np.array([-20])
+# y=np.array([140])
 # find theta1 and theta2 for each xy pair
 theta1=np.array([])
 theta2=np.array([])
@@ -46,11 +47,11 @@ def animate_fun(frame):
     link4.set_ydata(link4y)
     return (link1, link2, link3, link4)
 def animate_arm(fig, animate_fun, theta1):
-    ani = FuncAnimation(fig=fig, func=animate_fun, frames=len(theta1), interval=15)
-    #plt.show()
+    ani = FuncAnimation(fig=fig, func=animate_fun, frames=len(theta1), interval=30)
+    # plt.show()
     return ani
 
 # initialize the animation, and animate
 fig, ax, link1, link2, link3, link4 = init_animation(theta1, theta2, L1, L2, R1, R2, E, b)
 ani=animate_arm(fig, animate_fun, theta1)
-ani.save(filename="circle1.gif", writer="pillow")
+ani.save(filename="name.gif", writer="pillow")

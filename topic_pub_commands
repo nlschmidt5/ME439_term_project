@@ -1,0 +1,5 @@
+
+ros2 topic pub /endpoint_desired parallelbot_interfaces/msg/Endpoint "xy: [-20., 140.]"
+
+
+ros2 topic pub /joint_angles_desired parallelbot_interfaces/msg/PBJointAngles "{th1: 0., th2: 0.}"
