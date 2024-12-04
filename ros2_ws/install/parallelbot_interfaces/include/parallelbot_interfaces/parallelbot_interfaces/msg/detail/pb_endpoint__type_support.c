@@ -12,6 +12,10 @@
 #include "parallelbot_interfaces/msg/detail/pb_endpoint__struct.h"
 
 
+// Include directives for member types
+// Member `xy`
+#include "rosidl_runtime_c/primitives_sequence_functions.h"
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -34,24 +38,25 @@ void parallelbot_interfaces__msg__PBEndpoint__rosidl_typesupport_introspection_c
 size_t parallelbot_interfaces__msg__PBEndpoint__rosidl_typesupport_introspection_c__size_function__PBEndpoint__xy(
   const void * untyped_member)
 {
-  (void)untyped_member;
-  return 2;
+  const rosidl_runtime_c__float__Sequence * member =
+    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
+  return member->size;
 }
 
 const void * parallelbot_interfaces__msg__PBEndpoint__rosidl_typesupport_introspection_c__get_const_function__PBEndpoint__xy(
   const void * untyped_member, size_t index)
 {
-  const float * member =
-    (const float *)(untyped_member);
-  return &member[index];
+  const rosidl_runtime_c__float__Sequence * member =
+    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
+  return &member->data[index];
 }
 
 void * parallelbot_interfaces__msg__PBEndpoint__rosidl_typesupport_introspection_c__get_function__PBEndpoint__xy(
   void * untyped_member, size_t index)
 {
-  float * member =
-    (float *)(untyped_member);
-  return &member[index];
+  rosidl_runtime_c__float__Sequence * member =
+    (rosidl_runtime_c__float__Sequence *)(untyped_member);
+  return &member->data[index];
 }
 
 void parallelbot_interfaces__msg__PBEndpoint__rosidl_typesupport_introspection_c__fetch_function__PBEndpoint__xy(
@@ -76,6 +81,15 @@ void parallelbot_interfaces__msg__PBEndpoint__rosidl_typesupport_introspection_c
   *item = *value;
 }
 
+bool parallelbot_interfaces__msg__PBEndpoint__rosidl_typesupport_introspection_c__resize_function__PBEndpoint__xy(
+  void * untyped_member, size_t size)
+{
+  rosidl_runtime_c__float__Sequence * member =
+    (rosidl_runtime_c__float__Sequence *)(untyped_member);
+  rosidl_runtime_c__float__Sequence__fini(member);
+  return rosidl_runtime_c__float__Sequence__init(member, size);
+}
+
 static rosidl_typesupport_introspection_c__MessageMember parallelbot_interfaces__msg__PBEndpoint__rosidl_typesupport_introspection_c__PBEndpoint_message_member_array[1] = {
   {
     "xy",  // name
@@ -84,7 +98,7 @@ static rosidl_typesupport_introspection_c__MessageMember parallelbot_interfaces_
     NULL,  // members of sub message
     false,  // is key
     true,  // is array
-    2,  // array size
+    0,  // array size
     false,  // is upper bound
     offsetof(parallelbot_interfaces__msg__PBEndpoint, xy),  // bytes offset in struct
     NULL,  // default value
@@ -93,7 +107,7 @@ static rosidl_typesupport_introspection_c__MessageMember parallelbot_interfaces_
     parallelbot_interfaces__msg__PBEndpoint__rosidl_typesupport_introspection_c__get_function__PBEndpoint__xy,  // get(index) function pointer
     parallelbot_interfaces__msg__PBEndpoint__rosidl_typesupport_introspection_c__fetch_function__PBEndpoint__xy,  // fetch(index, &value) function pointer
     parallelbot_interfaces__msg__PBEndpoint__rosidl_typesupport_introspection_c__assign_function__PBEndpoint__xy,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
+    parallelbot_interfaces__msg__PBEndpoint__rosidl_typesupport_introspection_c__resize_function__PBEndpoint__xy  // resize(index) function pointer
   }
 };
 

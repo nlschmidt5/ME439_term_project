@@ -1,1 +1,1 @@
-float32[2] xy
+float32[] xy

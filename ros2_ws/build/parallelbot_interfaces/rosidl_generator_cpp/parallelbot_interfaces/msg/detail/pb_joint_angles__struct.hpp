@@ -38,50 +38,64 @@ struct PBJointAngles_
 
   explicit PBJointAngles_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
-    (void)_init;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->th1 = 0.0f;
+      this->th2 = 0.0f;
+      this->th3 = 0.0f;
+      this->th4 = 0.0f;
+    }
   }
 
   explicit PBJointAngles_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
-    (void)_init;
     (void)_alloc;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->th1 = 0.0f;
+      this->th2 = 0.0f;
+      this->th3 = 0.0f;
+      this->th4 = 0.0f;
+    }
   }
 
   // field types and members
   using _th1_type =
-    std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>>;
+    float;
   _th1_type th1;
   using _th2_type =
-    std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>>;
+    float;
   _th2_type th2;
   using _th3_type =
-    std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>>;
+    float;
   _th3_type th3;
   using _th4_type =
-    std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>>;
+    float;
   _th4_type th4;
 
   // setters for named parameter idiom
   Type & set__th1(
-    const std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>> & _arg)
+    const float & _arg)
   {
     this->th1 = _arg;
     return *this;
   }
   Type & set__th2(
-    const std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>> & _arg)
+    const float & _arg)
   {
     this->th2 = _arg;
     return *this;
   }
   Type & set__th3(
-    const std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>> & _arg)
+    const float & _arg)
   {
     this->th3 = _arg;
     return *this;
   }
   Type & set__th4(
-    const std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>> & _arg)
+    const float & _arg)
   {
     this->th4 = _arg;
     return *this;

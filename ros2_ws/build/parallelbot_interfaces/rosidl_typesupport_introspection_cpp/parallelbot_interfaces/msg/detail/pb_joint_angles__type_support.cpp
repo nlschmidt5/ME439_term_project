@@ -38,186 +38,6 @@ void PBJointAngles_fini_function(void * message_memory)
   typed_message->~PBJointAngles();
 }
 
-size_t size_function__PBJointAngles__th1(const void * untyped_member)
-{
-  const auto * member = reinterpret_cast<const std::vector<float> *>(untyped_member);
-  return member->size();
-}
-
-const void * get_const_function__PBJointAngles__th1(const void * untyped_member, size_t index)
-{
-  const auto & member =
-    *reinterpret_cast<const std::vector<float> *>(untyped_member);
-  return &member[index];
-}
-
-void * get_function__PBJointAngles__th1(void * untyped_member, size_t index)
-{
-  auto & member =
-    *reinterpret_cast<std::vector<float> *>(untyped_member);
-  return &member[index];
-}
-
-void fetch_function__PBJointAngles__th1(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const auto & item = *reinterpret_cast<const float *>(
-    get_const_function__PBJointAngles__th1(untyped_member, index));
-  auto & value = *reinterpret_cast<float *>(untyped_value);
-  value = item;
-}
-
-void assign_function__PBJointAngles__th1(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  auto & item = *reinterpret_cast<float *>(
-    get_function__PBJointAngles__th1(untyped_member, index));
-  const auto & value = *reinterpret_cast<const float *>(untyped_value);
-  item = value;
-}
-
-void resize_function__PBJointAngles__th1(void * untyped_member, size_t size)
-{
-  auto * member =
-    reinterpret_cast<std::vector<float> *>(untyped_member);
-  member->resize(size);
-}
-
-size_t size_function__PBJointAngles__th2(const void * untyped_member)
-{
-  const auto * member = reinterpret_cast<const std::vector<float> *>(untyped_member);
-  return member->size();
-}
-
-const void * get_const_function__PBJointAngles__th2(const void * untyped_member, size_t index)
-{
-  const auto & member =
-    *reinterpret_cast<const std::vector<float> *>(untyped_member);
-  return &member[index];
-}
-
-void * get_function__PBJointAngles__th2(void * untyped_member, size_t index)
-{
-  auto & member =
-    *reinterpret_cast<std::vector<float> *>(untyped_member);
-  return &member[index];
-}
-
-void fetch_function__PBJointAngles__th2(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const auto & item = *reinterpret_cast<const float *>(
-    get_const_function__PBJointAngles__th2(untyped_member, index));
-  auto & value = *reinterpret_cast<float *>(untyped_value);
-  value = item;
-}
-
-void assign_function__PBJointAngles__th2(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  auto & item = *reinterpret_cast<float *>(
-    get_function__PBJointAngles__th2(untyped_member, index));
-  const auto & value = *reinterpret_cast<const float *>(untyped_value);
-  item = value;
-}
-
-void resize_function__PBJointAngles__th2(void * untyped_member, size_t size)
-{
-  auto * member =
-    reinterpret_cast<std::vector<float> *>(untyped_member);
-  member->resize(size);
-}
-
-size_t size_function__PBJointAngles__th3(const void * untyped_member)
-{
-  const auto * member = reinterpret_cast<const std::vector<float> *>(untyped_member);
-  return member->size();
-}
-
-const void * get_const_function__PBJointAngles__th3(const void * untyped_member, size_t index)
-{
-  const auto & member =
-    *reinterpret_cast<const std::vector<float> *>(untyped_member);
-  return &member[index];
-}
-
-void * get_function__PBJointAngles__th3(void * untyped_member, size_t index)
-{
-  auto & member =
-    *reinterpret_cast<std::vector<float> *>(untyped_member);
-  return &member[index];
-}
-
-void fetch_function__PBJointAngles__th3(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const auto & item = *reinterpret_cast<const float *>(
-    get_const_function__PBJointAngles__th3(untyped_member, index));
-  auto & value = *reinterpret_cast<float *>(untyped_value);
-  value = item;
-}
-
-void assign_function__PBJointAngles__th3(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  auto & item = *reinterpret_cast<float *>(
-    get_function__PBJointAngles__th3(untyped_member, index));
-  const auto & value = *reinterpret_cast<const float *>(untyped_value);
-  item = value;
-}
-
-void resize_function__PBJointAngles__th3(void * untyped_member, size_t size)
-{
-  auto * member =
-    reinterpret_cast<std::vector<float> *>(untyped_member);
-  member->resize(size);
-}
-
-size_t size_function__PBJointAngles__th4(const void * untyped_member)
-{
-  const auto * member = reinterpret_cast<const std::vector<float> *>(untyped_member);
-  return member->size();
-}
-
-const void * get_const_function__PBJointAngles__th4(const void * untyped_member, size_t index)
-{
-  const auto & member =
-    *reinterpret_cast<const std::vector<float> *>(untyped_member);
-  return &member[index];
-}
-
-void * get_function__PBJointAngles__th4(void * untyped_member, size_t index)
-{
-  auto & member =
-    *reinterpret_cast<std::vector<float> *>(untyped_member);
-  return &member[index];
-}
-
-void fetch_function__PBJointAngles__th4(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const auto & item = *reinterpret_cast<const float *>(
-    get_const_function__PBJointAngles__th4(untyped_member, index));
-  auto & value = *reinterpret_cast<float *>(untyped_value);
-  value = item;
-}
-
-void assign_function__PBJointAngles__th4(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  auto & item = *reinterpret_cast<float *>(
-    get_function__PBJointAngles__th4(untyped_member, index));
-  const auto & value = *reinterpret_cast<const float *>(untyped_value);
-  item = value;
-}
-
-void resize_function__PBJointAngles__th4(void * untyped_member, size_t size)
-{
-  auto * member =
-    reinterpret_cast<std::vector<float> *>(untyped_member);
-  member->resize(size);
-}
-
 static const ::rosidl_typesupport_introspection_cpp::MessageMember PBJointAngles_message_member_array[4] = {
   {
     "th1",  // name
@@ -225,17 +45,17 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember PBJointAngles
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is key
-    true,  // is array
+    false,  // is array
     0,  // array size
     false,  // is upper bound
     offsetof(parallelbot_interfaces::msg::PBJointAngles, th1),  // bytes offset in struct
     nullptr,  // default value
-    size_function__PBJointAngles__th1,  // size() function pointer
-    get_const_function__PBJointAngles__th1,  // get_const(index) function pointer
-    get_function__PBJointAngles__th1,  // get(index) function pointer
-    fetch_function__PBJointAngles__th1,  // fetch(index, &value) function pointer
-    assign_function__PBJointAngles__th1,  // assign(index, value) function pointer
-    resize_function__PBJointAngles__th1  // resize(index) function pointer
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
   },
   {
     "th2",  // name
@@ -243,17 +63,17 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember PBJointAngles
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is key
-    true,  // is array
+    false,  // is array
     0,  // array size
     false,  // is upper bound
     offsetof(parallelbot_interfaces::msg::PBJointAngles, th2),  // bytes offset in struct
     nullptr,  // default value
-    size_function__PBJointAngles__th2,  // size() function pointer
-    get_const_function__PBJointAngles__th2,  // get_const(index) function pointer
-    get_function__PBJointAngles__th2,  // get(index) function pointer
-    fetch_function__PBJointAngles__th2,  // fetch(index, &value) function pointer
-    assign_function__PBJointAngles__th2,  // assign(index, value) function pointer
-    resize_function__PBJointAngles__th2  // resize(index) function pointer
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
   },
   {
     "th3",  // name
@@ -261,17 +81,17 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember PBJointAngles
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is key
-    true,  // is array
+    false,  // is array
     0,  // array size
     false,  // is upper bound
     offsetof(parallelbot_interfaces::msg::PBJointAngles, th3),  // bytes offset in struct
     nullptr,  // default value
-    size_function__PBJointAngles__th3,  // size() function pointer
-    get_const_function__PBJointAngles__th3,  // get_const(index) function pointer
-    get_function__PBJointAngles__th3,  // get(index) function pointer
-    fetch_function__PBJointAngles__th3,  // fetch(index, &value) function pointer
-    assign_function__PBJointAngles__th3,  // assign(index, value) function pointer
-    resize_function__PBJointAngles__th3  // resize(index) function pointer
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
   },
   {
     "th4",  // name
@@ -279,17 +99,17 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember PBJointAngles
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is key
-    true,  // is array
+    false,  // is array
     0,  // array size
     false,  // is upper bound
     offsetof(parallelbot_interfaces::msg::PBJointAngles, th4),  // bytes offset in struct
     nullptr,  // default value
-    size_function__PBJointAngles__th4,  // size() function pointer
-    get_const_function__PBJointAngles__th4,  // get_const(index) function pointer
-    get_function__PBJointAngles__th4,  // get(index) function pointer
-    fetch_function__PBJointAngles__th4,  // fetch(index, &value) function pointer
-    assign_function__PBJointAngles__th4,  // assign(index, value) function pointer
-    resize_function__PBJointAngles__th4  // resize(index) function pointer
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 

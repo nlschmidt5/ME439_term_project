@@ -19,10 +19,14 @@ extern "C"
 
 // Constants defined in the message
 
+// Include directives for member types
+// Member 'xy'
+#include "rosidl_runtime_c/primitives_sequence.h"
+
 /// Struct defined in msg/PBEndpoint in the package parallelbot_interfaces.
 typedef struct parallelbot_interfaces__msg__PBEndpoint
 {
-  float xy[2];
+  rosidl_runtime_c__float__Sequence xy;
 } parallelbot_interfaces__msg__PBEndpoint;
 
 // Struct for a sequence of parallelbot_interfaces__msg__PBEndpoint.

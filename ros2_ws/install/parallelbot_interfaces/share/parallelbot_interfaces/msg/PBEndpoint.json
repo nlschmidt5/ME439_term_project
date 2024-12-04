@@ -6,8 +6,8 @@
         {
           "name": "xy",
           "type": {
-            "type_id": 58,
-            "capacity": 2,
+            "type_id": 154,
+            "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
           },
@@ -20,7 +20,7 @@
   "type_hashes": [
     {
       "type_name": "parallelbot_interfaces/msg/PBEndpoint",
-      "hash_string": "RIHS01_01b510e09e23984bd82629a7f572e5ffcc4758912b51ed5be9980faed533f066"
+      "hash_string": "RIHS01_227d3a22c7e4e5142589c5ddd443f39380160813d6581c9d030d0f365c1ff941"
     }
   ]
 }

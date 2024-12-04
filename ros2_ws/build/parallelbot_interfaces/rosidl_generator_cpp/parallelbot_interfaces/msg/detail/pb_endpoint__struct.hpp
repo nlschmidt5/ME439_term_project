@@ -38,31 +38,23 @@ struct PBEndpoint_
 
   explicit PBEndpoint_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      std::fill<typename std::array<float, 2>::iterator, float>(this->xy.begin(), this->xy.end(), 0.0f);
-    }
+    (void)_init;
   }
 
   explicit PBEndpoint_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : xy(_alloc)
   {
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      std::fill<typename std::array<float, 2>::iterator, float>(this->xy.begin(), this->xy.end(), 0.0f);
-    }
+    (void)_init;
+    (void)_alloc;
   }
 
   // field types and members
   using _xy_type =
-    std::array<float, 2>;
+    std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>>;
   _xy_type xy;
 
   // setters for named parameter idiom
   Type & set__xy(
-    const std::array<float, 2> & _arg)
+    const std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>> & _arg)
   {
     this->xy = _arg;
     return *this;

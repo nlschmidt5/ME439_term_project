@@ -12,12 +12,6 @@ ros_python_check_fields = getenv('ROS_PYTHON_CHECK_FIELDS', default='')
 
 # Import statements for member types
 
-# Member 'th1'
-# Member 'th2'
-# Member 'th3'
-# Member 'th4'
-import array  # noqa: E402, I100
-
 import builtins  # noqa: E402, I100
 
 import math  # noqa: E402, I100
@@ -78,19 +72,19 @@ class PBJointAngles(metaclass=Metaclass_PBJointAngles):
     ]
 
     _fields_and_field_types = {
-        'th1': 'sequence<float>',
-        'th2': 'sequence<float>',
-        'th3': 'sequence<float>',
-        'th4': 'sequence<float>',
+        'th1': 'float',
+        'th2': 'float',
+        'th3': 'float',
+        'th4': 'float',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
     # related to the data type of each of the components the message.
     SLOT_TYPES = (
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('float')),  # noqa: E501
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('float')),  # noqa: E501
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('float')),  # noqa: E501
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('float')),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -102,10 +96,10 @@ class PBJointAngles(metaclass=Metaclass_PBJointAngles):
             assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.th1 = array.array('f', kwargs.get('th1', []))
-        self.th2 = array.array('f', kwargs.get('th2', []))
-        self.th3 = array.array('f', kwargs.get('th3', []))
-        self.th4 = array.array('f', kwargs.get('th4', []))
+        self.th1 = kwargs.get('th1', float())
+        self.th2 = kwargs.get('th2', float())
+        self.th3 = kwargs.get('th3', float())
+        self.th4 = kwargs.get('th4', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -160,25 +154,12 @@ class PBJointAngles(metaclass=Metaclass_PBJointAngles):
     @th1.setter
     def th1(self, value):
         if self._check_fields:
-            if isinstance(value, array.array):
-                assert value.typecode == 'f', \
-                    "The 'th1' array.array() must have the type code of 'f'"
-                self._th1 = value
-                return
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
             assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 all(isinstance(v, float) for v in value) and
-                 all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'th1' field must be a set or sequence and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
-        self._th1 = array.array('f', value)
+                isinstance(value, float), \
+                "The 'th1' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'th1' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._th1 = value
 
     @builtins.property
     def th2(self):
@@ -188,25 +169,12 @@ class PBJointAngles(metaclass=Metaclass_PBJointAngles):
     @th2.setter
     def th2(self, value):
         if self._check_fields:
-            if isinstance(value, array.array):
-                assert value.typecode == 'f', \
-                    "The 'th2' array.array() must have the type code of 'f'"
-                self._th2 = value
-                return
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
             assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 all(isinstance(v, float) for v in value) and
-                 all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'th2' field must be a set or sequence and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
-        self._th2 = array.array('f', value)
+                isinstance(value, float), \
+                "The 'th2' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'th2' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._th2 = value
 
     @builtins.property
     def th3(self):
@@ -216,25 +184,12 @@ class PBJointAngles(metaclass=Metaclass_PBJointAngles):
     @th3.setter
     def th3(self, value):
         if self._check_fields:
-            if isinstance(value, array.array):
-                assert value.typecode == 'f', \
-                    "The 'th3' array.array() must have the type code of 'f'"
-                self._th3 = value
-                return
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
             assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 all(isinstance(v, float) for v in value) and
-                 all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'th3' field must be a set or sequence and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
-        self._th3 = array.array('f', value)
+                isinstance(value, float), \
+                "The 'th3' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'th3' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._th3 = value
 
     @builtins.property
     def th4(self):
@@ -244,22 +199,9 @@ class PBJointAngles(metaclass=Metaclass_PBJointAngles):
     @th4.setter
     def th4(self, value):
         if self._check_fields:
-            if isinstance(value, array.array):
-                assert value.typecode == 'f', \
-                    "The 'th4' array.array() must have the type code of 'f'"
-                self._th4 = value
-                return
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
             assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 all(isinstance(v, float) for v in value) and
-                 all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'th4' field must be a set or sequence and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
-        self._th4 = array.array('f', value)
+                isinstance(value, float), \
+                "The 'th4' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'th4' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._th4 = value

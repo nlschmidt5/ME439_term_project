@@ -19,20 +19,13 @@ extern "C"
 
 // Constants defined in the message
 
-// Include directives for member types
-// Member 'th1'
-// Member 'th2'
-// Member 'th3'
-// Member 'th4'
-#include "rosidl_runtime_c/primitives_sequence.h"
-
 /// Struct defined in msg/PBJointAngles in the package parallelbot_interfaces.
 typedef struct parallelbot_interfaces__msg__PBJointAngles
 {
-  rosidl_runtime_c__float__Sequence th1;
-  rosidl_runtime_c__float__Sequence th2;
-  rosidl_runtime_c__float__Sequence th3;
-  rosidl_runtime_c__float__Sequence th4;
+  float th1;
+  float th2;
+  float th3;
+  float th4;
 } parallelbot_interfaces__msg__PBJointAngles;
 
 // Struct for a sequence of parallelbot_interfaces__msg__PBJointAngles.

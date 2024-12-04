@@ -16,9 +16,6 @@
 #include "parallelbot_interfaces/msg/detail/pb_joint_angles__struct.h"
 #include "parallelbot_interfaces/msg/detail/pb_joint_angles__functions.h"
 
-#include "rosidl_runtime_c/primitives_sequence.h"
-#include "rosidl_runtime_c/primitives_sequence_functions.h"
-
 
 ROSIDL_GENERATOR_C_EXPORT
 bool parallelbot_interfaces__msg__pb_joint_angles__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -58,61 +55,8 @@ bool parallelbot_interfaces__msg__pb_joint_angles__convert_from_py(PyObject * _p
     if (!field) {
       return false;
     }
-    if (PyObject_CheckBuffer(field)) {
-      // Optimization for converting arrays of primitives
-      Py_buffer view;
-      int rc = PyObject_GetBuffer(field, &view, PyBUF_SIMPLE);
-      if (rc < 0) {
-        Py_DECREF(field);
-        return false;
-      }
-      Py_ssize_t size = view.len / sizeof(float);
-      if (!rosidl_runtime_c__float__Sequence__init(&(ros_message->th1), size)) {
-        PyErr_SetString(PyExc_RuntimeError, "unable to create float__Sequence ros_message");
-        PyBuffer_Release(&view);
-        Py_DECREF(field);
-        return false;
-      }
-      float * dest = ros_message->th1.data;
-      rc = PyBuffer_ToContiguous(dest, &view, view.len, 'C');
-      if (rc < 0) {
-        PyBuffer_Release(&view);
-        Py_DECREF(field);
-        return false;
-      }
-      PyBuffer_Release(&view);
-    } else {
-      PyObject * seq_field = PySequence_Fast(field, "expected a sequence in 'th1'");
-      if (!seq_field) {
-        Py_DECREF(field);
-        return false;
-      }
-      Py_ssize_t size = PySequence_Size(field);
-      if (-1 == size) {
-        Py_DECREF(seq_field);
-        Py_DECREF(field);
-        return false;
-      }
-      if (!rosidl_runtime_c__float__Sequence__init(&(ros_message->th1), size)) {
-        PyErr_SetString(PyExc_RuntimeError, "unable to create float__Sequence ros_message");
-        Py_DECREF(seq_field);
-        Py_DECREF(field);
-        return false;
-      }
-      float * dest = ros_message->th1.data;
-      for (Py_ssize_t i = 0; i < size; ++i) {
-        PyObject * item = PySequence_Fast_GET_ITEM(seq_field, i);
-        if (!item) {
-          Py_DECREF(seq_field);
-          Py_DECREF(field);
-          return false;
-        }
-        assert(PyFloat_Check(item));
-        float tmp = (float)PyFloat_AS_DOUBLE(item);
-        memcpy(&dest[i], &tmp, sizeof(float));
-      }
-      Py_DECREF(seq_field);
-    }
+    assert(PyFloat_Check(field));
+    ros_message->th1 = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // th2
@@ -120,61 +64,8 @@ bool parallelbot_interfaces__msg__pb_joint_angles__convert_from_py(PyObject * _p
     if (!field) {
       return false;
     }
-    if (PyObject_CheckBuffer(field)) {
-      // Optimization for converting arrays of primitives
-      Py_buffer view;
-      int rc = PyObject_GetBuffer(field, &view, PyBUF_SIMPLE);
-      if (rc < 0) {
-        Py_DECREF(field);
-        return false;
-      }
-      Py_ssize_t size = view.len / sizeof(float);
-      if (!rosidl_runtime_c__float__Sequence__init(&(ros_message->th2), size)) {
-        PyErr_SetString(PyExc_RuntimeError, "unable to create float__Sequence ros_message");
-        PyBuffer_Release(&view);
-        Py_DECREF(field);
-        return false;
-      }
-      float * dest = ros_message->th2.data;
-      rc = PyBuffer_ToContiguous(dest, &view, view.len, 'C');
-      if (rc < 0) {
-        PyBuffer_Release(&view);
-        Py_DECREF(field);
-        return false;
-      }
-      PyBuffer_Release(&view);
-    } else {
-      PyObject * seq_field = PySequence_Fast(field, "expected a sequence in 'th2'");
-      if (!seq_field) {
-        Py_DECREF(field);
-        return false;
-      }
-      Py_ssize_t size = PySequence_Size(field);
-      if (-1 == size) {
-        Py_DECREF(seq_field);
-        Py_DECREF(field);
-        return false;
-      }
-      if (!rosidl_runtime_c__float__Sequence__init(&(ros_message->th2), size)) {
-        PyErr_SetString(PyExc_RuntimeError, "unable to create float__Sequence ros_message");
-        Py_DECREF(seq_field);
-        Py_DECREF(field);
-        return false;
-      }
-      float * dest = ros_message->th2.data;
-      for (Py_ssize_t i = 0; i < size; ++i) {
-        PyObject * item = PySequence_Fast_GET_ITEM(seq_field, i);
-        if (!item) {
-          Py_DECREF(seq_field);
-          Py_DECREF(field);
-          return false;
-        }
-        assert(PyFloat_Check(item));
-        float tmp = (float)PyFloat_AS_DOUBLE(item);
-        memcpy(&dest[i], &tmp, sizeof(float));
-      }
-      Py_DECREF(seq_field);
-    }
+    assert(PyFloat_Check(field));
+    ros_message->th2 = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // th3
@@ -182,61 +73,8 @@ bool parallelbot_interfaces__msg__pb_joint_angles__convert_from_py(PyObject * _p
     if (!field) {
       return false;
     }
-    if (PyObject_CheckBuffer(field)) {
-      // Optimization for converting arrays of primitives
-      Py_buffer view;
-      int rc = PyObject_GetBuffer(field, &view, PyBUF_SIMPLE);
-      if (rc < 0) {
-        Py_DECREF(field);
-        return false;
-      }
-      Py_ssize_t size = view.len / sizeof(float);
-      if (!rosidl_runtime_c__float__Sequence__init(&(ros_message->th3), size)) {
-        PyErr_SetString(PyExc_RuntimeError, "unable to create float__Sequence ros_message");
-        PyBuffer_Release(&view);
-        Py_DECREF(field);
-        return false;
-      }
-      float * dest = ros_message->th3.data;
-      rc = PyBuffer_ToContiguous(dest, &view, view.len, 'C');
-      if (rc < 0) {
-        PyBuffer_Release(&view);
-        Py_DECREF(field);
-        return false;
-      }
-      PyBuffer_Release(&view);
-    } else {
-      PyObject * seq_field = PySequence_Fast(field, "expected a sequence in 'th3'");
-      if (!seq_field) {
-        Py_DECREF(field);
-        return false;
-      }
-      Py_ssize_t size = PySequence_Size(field);
-      if (-1 == size) {
-        Py_DECREF(seq_field);
-        Py_DECREF(field);
-        return false;
-      }
-      if (!rosidl_runtime_c__float__Sequence__init(&(ros_message->th3), size)) {
-        PyErr_SetString(PyExc_RuntimeError, "unable to create float__Sequence ros_message");
-        Py_DECREF(seq_field);
-        Py_DECREF(field);
-        return false;
-      }
-      float * dest = ros_message->th3.data;
-      for (Py_ssize_t i = 0; i < size; ++i) {
-        PyObject * item = PySequence_Fast_GET_ITEM(seq_field, i);
-        if (!item) {
-          Py_DECREF(seq_field);
-          Py_DECREF(field);
-          return false;
-        }
-        assert(PyFloat_Check(item));
-        float tmp = (float)PyFloat_AS_DOUBLE(item);
-        memcpy(&dest[i], &tmp, sizeof(float));
-      }
-      Py_DECREF(seq_field);
-    }
+    assert(PyFloat_Check(field));
+    ros_message->th3 = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // th4
@@ -244,61 +82,8 @@ bool parallelbot_interfaces__msg__pb_joint_angles__convert_from_py(PyObject * _p
     if (!field) {
       return false;
     }
-    if (PyObject_CheckBuffer(field)) {
-      // Optimization for converting arrays of primitives
-      Py_buffer view;
-      int rc = PyObject_GetBuffer(field, &view, PyBUF_SIMPLE);
-      if (rc < 0) {
-        Py_DECREF(field);
-        return false;
-      }
-      Py_ssize_t size = view.len / sizeof(float);
-      if (!rosidl_runtime_c__float__Sequence__init(&(ros_message->th4), size)) {
-        PyErr_SetString(PyExc_RuntimeError, "unable to create float__Sequence ros_message");
-        PyBuffer_Release(&view);
-        Py_DECREF(field);
-        return false;
-      }
-      float * dest = ros_message->th4.data;
-      rc = PyBuffer_ToContiguous(dest, &view, view.len, 'C');
-      if (rc < 0) {
-        PyBuffer_Release(&view);
-        Py_DECREF(field);
-        return false;
-      }
-      PyBuffer_Release(&view);
-    } else {
-      PyObject * seq_field = PySequence_Fast(field, "expected a sequence in 'th4'");
-      if (!seq_field) {
-        Py_DECREF(field);
-        return false;
-      }
-      Py_ssize_t size = PySequence_Size(field);
-      if (-1 == size) {
-        Py_DECREF(seq_field);
-        Py_DECREF(field);
-        return false;
-      }
-      if (!rosidl_runtime_c__float__Sequence__init(&(ros_message->th4), size)) {
-        PyErr_SetString(PyExc_RuntimeError, "unable to create float__Sequence ros_message");
-        Py_DECREF(seq_field);
-        Py_DECREF(field);
-        return false;
-      }
-      float * dest = ros_message->th4.data;
-      for (Py_ssize_t i = 0; i < size; ++i) {
-        PyObject * item = PySequence_Fast_GET_ITEM(seq_field, i);
-        if (!item) {
-          Py_DECREF(seq_field);
-          Py_DECREF(field);
-          return false;
-        }
-        assert(PyFloat_Check(item));
-        float tmp = (float)PyFloat_AS_DOUBLE(item);
-        memcpy(&dest[i], &tmp, sizeof(float));
-      }
-      Py_DECREF(seq_field);
-    }
+    assert(PyFloat_Check(field));
+    ros_message->th4 = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
 
@@ -325,231 +110,47 @@ PyObject * parallelbot_interfaces__msg__pb_joint_angles__convert_to_py(void * ra
   parallelbot_interfaces__msg__PBJointAngles * ros_message = (parallelbot_interfaces__msg__PBJointAngles *)raw_ros_message;
   {  // th1
     PyObject * field = NULL;
-    field = PyObject_GetAttrString(_pymessage, "th1");
-    if (!field) {
-      return NULL;
-    }
-    assert(field->ob_type != NULL);
-    assert(field->ob_type->tp_name != NULL);
-    assert(strcmp(field->ob_type->tp_name, "array.array") == 0);
-    // ensure that itemsize matches the sizeof of the ROS message field
-    PyObject * itemsize_attr = PyObject_GetAttrString(field, "itemsize");
-    assert(itemsize_attr != NULL);
-    size_t itemsize = PyLong_AsSize_t(itemsize_attr);
-    Py_DECREF(itemsize_attr);
-    if (itemsize != sizeof(float)) {
-      PyErr_SetString(PyExc_RuntimeError, "itemsize doesn't match expectation");
+    field = PyFloat_FromDouble(ros_message->th1);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "th1", field);
       Py_DECREF(field);
-      return NULL;
-    }
-    // clear the array, poor approach to remove potential default values
-    Py_ssize_t length = PyObject_Length(field);
-    if (-1 == length) {
-      Py_DECREF(field);
-      return NULL;
-    }
-    if (length > 0) {
-      PyObject * pop = PyObject_GetAttrString(field, "pop");
-      assert(pop != NULL);
-      for (Py_ssize_t i = 0; i < length; ++i) {
-        PyObject * ret = PyObject_CallFunctionObjArgs(pop, NULL);
-        if (!ret) {
-          Py_DECREF(pop);
-          Py_DECREF(field);
-          return NULL;
-        }
-        Py_DECREF(ret);
-      }
-      Py_DECREF(pop);
-    }
-    if (ros_message->th1.size > 0) {
-      // populating the array.array using the frombytes method
-      PyObject * frombytes = PyObject_GetAttrString(field, "frombytes");
-      assert(frombytes != NULL);
-      float * src = &(ros_message->th1.data[0]);
-      PyObject * data = PyBytes_FromStringAndSize((const char *)src, ros_message->th1.size * sizeof(float));
-      assert(data != NULL);
-      PyObject * ret = PyObject_CallFunctionObjArgs(frombytes, data, NULL);
-      Py_DECREF(data);
-      Py_DECREF(frombytes);
-      if (!ret) {
-        Py_DECREF(field);
+      if (rc) {
         return NULL;
       }
-      Py_DECREF(ret);
     }
-    Py_DECREF(field);
   }
   {  // th2
     PyObject * field = NULL;
-    field = PyObject_GetAttrString(_pymessage, "th2");
-    if (!field) {
-      return NULL;
-    }
-    assert(field->ob_type != NULL);
-    assert(field->ob_type->tp_name != NULL);
-    assert(strcmp(field->ob_type->tp_name, "array.array") == 0);
-    // ensure that itemsize matches the sizeof of the ROS message field
-    PyObject * itemsize_attr = PyObject_GetAttrString(field, "itemsize");
-    assert(itemsize_attr != NULL);
-    size_t itemsize = PyLong_AsSize_t(itemsize_attr);
-    Py_DECREF(itemsize_attr);
-    if (itemsize != sizeof(float)) {
-      PyErr_SetString(PyExc_RuntimeError, "itemsize doesn't match expectation");
+    field = PyFloat_FromDouble(ros_message->th2);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "th2", field);
       Py_DECREF(field);
-      return NULL;
-    }
-    // clear the array, poor approach to remove potential default values
-    Py_ssize_t length = PyObject_Length(field);
-    if (-1 == length) {
-      Py_DECREF(field);
-      return NULL;
-    }
-    if (length > 0) {
-      PyObject * pop = PyObject_GetAttrString(field, "pop");
-      assert(pop != NULL);
-      for (Py_ssize_t i = 0; i < length; ++i) {
-        PyObject * ret = PyObject_CallFunctionObjArgs(pop, NULL);
-        if (!ret) {
-          Py_DECREF(pop);
-          Py_DECREF(field);
-          return NULL;
-        }
-        Py_DECREF(ret);
-      }
-      Py_DECREF(pop);
-    }
-    if (ros_message->th2.size > 0) {
-      // populating the array.array using the frombytes method
-      PyObject * frombytes = PyObject_GetAttrString(field, "frombytes");
-      assert(frombytes != NULL);
-      float * src = &(ros_message->th2.data[0]);
-      PyObject * data = PyBytes_FromStringAndSize((const char *)src, ros_message->th2.size * sizeof(float));
-      assert(data != NULL);
-      PyObject * ret = PyObject_CallFunctionObjArgs(frombytes, data, NULL);
-      Py_DECREF(data);
-      Py_DECREF(frombytes);
-      if (!ret) {
-        Py_DECREF(field);
+      if (rc) {
         return NULL;
       }
-      Py_DECREF(ret);
     }
-    Py_DECREF(field);
   }
   {  // th3
     PyObject * field = NULL;
-    field = PyObject_GetAttrString(_pymessage, "th3");
-    if (!field) {
-      return NULL;
-    }
-    assert(field->ob_type != NULL);
-    assert(field->ob_type->tp_name != NULL);
-    assert(strcmp(field->ob_type->tp_name, "array.array") == 0);
-    // ensure that itemsize matches the sizeof of the ROS message field
-    PyObject * itemsize_attr = PyObject_GetAttrString(field, "itemsize");
-    assert(itemsize_attr != NULL);
-    size_t itemsize = PyLong_AsSize_t(itemsize_attr);
-    Py_DECREF(itemsize_attr);
-    if (itemsize != sizeof(float)) {
-      PyErr_SetString(PyExc_RuntimeError, "itemsize doesn't match expectation");
+    field = PyFloat_FromDouble(ros_message->th3);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "th3", field);
       Py_DECREF(field);
-      return NULL;
-    }
-    // clear the array, poor approach to remove potential default values
-    Py_ssize_t length = PyObject_Length(field);
-    if (-1 == length) {
-      Py_DECREF(field);
-      return NULL;
-    }
-    if (length > 0) {
-      PyObject * pop = PyObject_GetAttrString(field, "pop");
-      assert(pop != NULL);
-      for (Py_ssize_t i = 0; i < length; ++i) {
-        PyObject * ret = PyObject_CallFunctionObjArgs(pop, NULL);
-        if (!ret) {
-          Py_DECREF(pop);
-          Py_DECREF(field);
-          return NULL;
-        }
-        Py_DECREF(ret);
-      }
-      Py_DECREF(pop);
-    }
-    if (ros_message->th3.size > 0) {
-      // populating the array.array using the frombytes method
-      PyObject * frombytes = PyObject_GetAttrString(field, "frombytes");
-      assert(frombytes != NULL);
-      float * src = &(ros_message->th3.data[0]);
-      PyObject * data = PyBytes_FromStringAndSize((const char *)src, ros_message->th3.size * sizeof(float));
-      assert(data != NULL);
-      PyObject * ret = PyObject_CallFunctionObjArgs(frombytes, data, NULL);
-      Py_DECREF(data);
-      Py_DECREF(frombytes);
-      if (!ret) {
-        Py_DECREF(field);
+      if (rc) {
         return NULL;
       }
-      Py_DECREF(ret);
     }
-    Py_DECREF(field);
   }
   {  // th4
     PyObject * field = NULL;
-    field = PyObject_GetAttrString(_pymessage, "th4");
-    if (!field) {
-      return NULL;
-    }
-    assert(field->ob_type != NULL);
-    assert(field->ob_type->tp_name != NULL);
-    assert(strcmp(field->ob_type->tp_name, "array.array") == 0);
-    // ensure that itemsize matches the sizeof of the ROS message field
-    PyObject * itemsize_attr = PyObject_GetAttrString(field, "itemsize");
-    assert(itemsize_attr != NULL);
-    size_t itemsize = PyLong_AsSize_t(itemsize_attr);
-    Py_DECREF(itemsize_attr);
-    if (itemsize != sizeof(float)) {
-      PyErr_SetString(PyExc_RuntimeError, "itemsize doesn't match expectation");
+    field = PyFloat_FromDouble(ros_message->th4);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "th4", field);
       Py_DECREF(field);
-      return NULL;
-    }
-    // clear the array, poor approach to remove potential default values
-    Py_ssize_t length = PyObject_Length(field);
-    if (-1 == length) {
-      Py_DECREF(field);
-      return NULL;
-    }
-    if (length > 0) {
-      PyObject * pop = PyObject_GetAttrString(field, "pop");
-      assert(pop != NULL);
-      for (Py_ssize_t i = 0; i < length; ++i) {
-        PyObject * ret = PyObject_CallFunctionObjArgs(pop, NULL);
-        if (!ret) {
-          Py_DECREF(pop);
-          Py_DECREF(field);
-          return NULL;
-        }
-        Py_DECREF(ret);
-      }
-      Py_DECREF(pop);
-    }
-    if (ros_message->th4.size > 0) {
-      // populating the array.array using the frombytes method
-      PyObject * frombytes = PyObject_GetAttrString(field, "frombytes");
-      assert(frombytes != NULL);
-      float * src = &(ros_message->th4.data[0]);
-      PyObject * data = PyBytes_FromStringAndSize((const char *)src, ros_message->th4.size * sizeof(float));
-      assert(data != NULL);
-      PyObject * ret = PyObject_CallFunctionObjArgs(frombytes, data, NULL);
-      Py_DECREF(data);
-      Py_DECREF(frombytes);
-      if (!ret) {
-        Py_DECREF(field);
+      if (rc) {
         return NULL;
       }
-      Py_DECREF(ret);
     }
-    Py_DECREF(field);
   }
 
   // ownership of _pymessage is transferred to the caller
