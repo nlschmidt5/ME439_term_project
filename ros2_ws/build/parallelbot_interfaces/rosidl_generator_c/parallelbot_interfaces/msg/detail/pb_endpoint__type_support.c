@@ -4,9 +4,9 @@
 
 #include <string.h>
 
-#include "parallelbot_interfaces/msg/detail/pb_endpoint__type_support.h"
 #include "parallelbot_interfaces/msg/detail/pb_endpoint__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "parallelbot_interfaces/msg/detail/pb_endpoint__type_support.h"
 #include "parallelbot_interfaces/msg/detail/pb_endpoint__struct.h"
 
 #ifdef __cplusplus
