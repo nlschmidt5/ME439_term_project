@@ -43,14 +43,14 @@ def loadconfig(selection):
         # x=-1
         # y=5
     if selection ==5:
-        L1=1.5
-        L2=2
-        R1=1.5
-        R2=2
-        b=2
-        E=2
-        x=-1
-        y=5
+        L1=55
+        L2=90
+        R1=55
+        R2=140
+        b=50
+        E=30
+        # x=-1
+        # y=5
     return L1,L2,R1,R2,b,E
 
 def calc_FK(theta1, theta2, L1, L2, R1, R2, E, b):

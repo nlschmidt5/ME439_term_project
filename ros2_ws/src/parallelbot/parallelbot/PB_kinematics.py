@@ -17,11 +17,11 @@ class PB_kinematics(Node):
         self.pub_IK = self.create_publisher(PBJointAngles, '/joint_angles',1)
         
         # define robot parameters
-        self.L1 = self.declare_parameter('L1',1.414).value
-        self.L2 = self.declare_parameter('L2',2).value
-        self.R1 =self.declare_parameter('R1',1.414).value
-        self.R2 =self.declare_parameter('R2',2.828).value
-        self.E = self.declare_parameter('E',2.828).value
+        self.L1 = self.declare_parameter('L1',55).value
+        self.L2 = self.declare_parameter('L2',90).value
+        self.R1 =self.declare_parameter('R1',55).value
+        self.R2 =self.declare_parameter('R2',140).value
+        self.E = self.declare_parameter('E',30).value
         self.b = self.declare_parameter('b',2).value
         
         self.theta=PBJointAngles
