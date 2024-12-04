@@ -7,13 +7,13 @@ from matplotlib.animation import FuncAnimation
 import numpy as np
 from matplotlib import pyplot as plt
 
-config=4
+config=5
 L1,L2,R1,R2,b,E=pbm.loadconfig(config)
 
 # draw a circle
 t=np.linspace(0, 2*np.pi, 90)
-x=0.4*np.cos(t)-1
-y=0.4*np.sin(t)+5
+x=20*np.cos(t)-20
+y=20*np.sin(t)+140
 
 # find theta1 and theta2 for each xy pair
 theta1=np.array([])
@@ -26,7 +26,8 @@ for i in range(len(x)):
 # animation functions
 def init_animation(theta1, theta2, L1, L2, R1, R2, E, b):
     fig, ax = plt.subplots()
-    ax.set(xlim=[-5, 5], ylim=[-2, 8], xlabel='x (m)', ylabel='y (m)')
+    # make sure limits are set to see the whole robot.
+    ax.set(xlim=[-100, 150], ylim=[-50, 200], xlabel='x (mm)', ylabel='y (mm)')
     link1x, link1y, link2x, link2y, link3x, link3y, link4x, link4y=pbm.calc_FK(theta1[0], theta2[0], L1, L2, R1, R2, E, b)
     link1=ax.plot(link1x[0], link1y[0])[0]
     link2=ax.plot(link2x[0], link2y[0])[0]
@@ -46,9 +47,10 @@ def animate_fun(frame):
     return (link1, link2, link3, link4)
 def animate_arm(fig, animate_fun, theta1):
     ani = FuncAnimation(fig=fig, func=animate_fun, frames=len(theta1), interval=15)
-    plt.show()
-    return 0
+    #plt.show()
+    return ani
 
 # initialize the animation, and animate
 fig, ax, link1, link2, link3, link4 = init_animation(theta1, theta2, L1, L2, R1, R2, E, b)
-animate_arm(fig, animate_fun, theta1)
+ani=animate_arm(fig, animate_fun, theta1)
+ani.save(filename="circle1.gif", writer="pillow")
