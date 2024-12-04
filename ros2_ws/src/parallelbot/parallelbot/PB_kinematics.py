@@ -22,7 +22,7 @@ class PB_kinematics(Node):
         self.R1 =self.declare_parameter('R1',55).value
         self.R2 =self.declare_parameter('R2',140).value
         self.E = self.declare_parameter('E',30).value
-        self.b = self.declare_parameter('b',2).value
+        self.b = self.declare_parameter('b',40).value
         
         self.theta=PBJointAngles
         self.endpoint=PBEndpoint
