@@ -5,9 +5,8 @@
 
 module parallelbot_interfaces {
   module msg {
-    typedef float float__2[2];
     struct PBEndpoint {
-      float__2 xy;
+      sequence<float> xy;
     };
   };
 };

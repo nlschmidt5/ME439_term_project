@@ -6,13 +6,13 @@
 module parallelbot_interfaces {
   module msg {
     struct PBJointAngles {
-      sequence<float> th1;
+      float th1;
 
-      sequence<float> th2;
+      float th2;
 
-      sequence<float> th3;
+      float th3;
 
-      sequence<float> th4;
+      float th4;
     };
   };
 };

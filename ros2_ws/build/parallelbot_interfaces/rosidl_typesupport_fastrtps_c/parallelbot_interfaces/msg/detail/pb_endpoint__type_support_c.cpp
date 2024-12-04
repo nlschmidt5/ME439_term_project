@@ -36,6 +36,8 @@ extern "C"
 {
 #endif
 
+#include "rosidl_runtime_c/primitives_sequence.h"  // xy
+#include "rosidl_runtime_c/primitives_sequence_functions.h"  // xy
 
 // forward declare type support functions
 
@@ -50,8 +52,9 @@ bool cdr_serialize_parallelbot_interfaces__msg__PBEndpoint(
 {
   // Field name: xy
   {
-    size_t size = 2;
-    auto array_ptr = ros_message->xy;
+    size_t size = ros_message->xy.size;
+    auto array_ptr = ros_message->xy.data;
+    cdr << static_cast<uint32_t>(size);
     cdr.serialize_array(array_ptr, size);
   }
 
@@ -65,8 +68,17 @@ bool cdr_deserialize_parallelbot_interfaces__msg__PBEndpoint(
 {
   // Field name: xy
   {
-    size_t size = 2;
-    auto array_ptr = ros_message->xy;
+    uint32_t cdrSize;
+    cdr >> cdrSize;
+    size_t size = static_cast<size_t>(cdrSize);
+    if (ros_message->xy.data) {
+      rosidl_runtime_c__float__Sequence__fini(&ros_message->xy);
+    }
+    if (!rosidl_runtime_c__float__Sequence__init(&ros_message->xy, size)) {
+      fprintf(stderr, "failed to create array for field 'xy'");
+      return false;
+    }
+    auto array_ptr = ros_message->xy.data;
     cdr.deserialize_array(array_ptr, size);
   }
 
@@ -90,8 +102,10 @@ size_t get_serialized_size_parallelbot_interfaces__msg__PBEndpoint(
 
   // Field name: xy
   {
-    size_t array_size = 2;
-    auto array_ptr = ros_message->xy;
+    size_t array_size = ros_message->xy.size;
+    auto array_ptr = ros_message->xy.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
     (void)array_ptr;
     size_t item_size = sizeof(array_ptr[0]);
     current_alignment += array_size * item_size +
@@ -122,7 +136,11 @@ size_t max_serialized_size_parallelbot_interfaces__msg__PBEndpoint(
 
   // Field name: xy
   {
-    size_t array_size = 2;
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
@@ -151,8 +169,9 @@ bool cdr_serialize_key_parallelbot_interfaces__msg__PBEndpoint(
 {
   // Field name: xy
   {
-    size_t size = 2;
-    auto array_ptr = ros_message->xy;
+    size_t size = ros_message->xy.size;
+    auto array_ptr = ros_message->xy.data;
+    cdr << static_cast<uint32_t>(size);
     cdr.serialize_array(array_ptr, size);
   }
 
@@ -176,8 +195,10 @@ size_t get_serialized_size_key_parallelbot_interfaces__msg__PBEndpoint(
 
   // Field name: xy
   {
-    size_t array_size = 2;
-    auto array_ptr = ros_message->xy;
+    size_t array_size = ros_message->xy.size;
+    auto array_ptr = ros_message->xy.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
     (void)array_ptr;
     size_t item_size = sizeof(array_ptr[0]);
     current_alignment += array_size * item_size +
@@ -206,7 +227,11 @@ size_t max_serialized_size_key_parallelbot_interfaces__msg__PBEndpoint(
   is_plain = true;
   // Field name: xy
   {
-    size_t array_size = 2;
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));

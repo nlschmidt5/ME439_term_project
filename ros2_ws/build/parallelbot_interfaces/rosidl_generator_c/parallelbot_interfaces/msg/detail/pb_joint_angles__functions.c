@@ -11,13 +11,6 @@
 #include "rcutils/allocator.h"
 
 
-// Include directives for member types
-// Member `th1`
-// Member `th2`
-// Member `th3`
-// Member `th4`
-#include "rosidl_runtime_c/primitives_sequence_functions.h"
-
 bool
 parallelbot_interfaces__msg__PBJointAngles__init(parallelbot_interfaces__msg__PBJointAngles * msg)
 {
@@ -25,25 +18,9 @@ parallelbot_interfaces__msg__PBJointAngles__init(parallelbot_interfaces__msg__PB
     return false;
   }
   // th1
-  if (!rosidl_runtime_c__float__Sequence__init(&msg->th1, 0)) {
-    parallelbot_interfaces__msg__PBJointAngles__fini(msg);
-    return false;
-  }
   // th2
-  if (!rosidl_runtime_c__float__Sequence__init(&msg->th2, 0)) {
-    parallelbot_interfaces__msg__PBJointAngles__fini(msg);
-    return false;
-  }
   // th3
-  if (!rosidl_runtime_c__float__Sequence__init(&msg->th3, 0)) {
-    parallelbot_interfaces__msg__PBJointAngles__fini(msg);
-    return false;
-  }
   // th4
-  if (!rosidl_runtime_c__float__Sequence__init(&msg->th4, 0)) {
-    parallelbot_interfaces__msg__PBJointAngles__fini(msg);
-    return false;
-  }
   return true;
 }
 
@@ -54,13 +31,9 @@ parallelbot_interfaces__msg__PBJointAngles__fini(parallelbot_interfaces__msg__PB
     return;
   }
   // th1
-  rosidl_runtime_c__float__Sequence__fini(&msg->th1);
   // th2
-  rosidl_runtime_c__float__Sequence__fini(&msg->th2);
   // th3
-  rosidl_runtime_c__float__Sequence__fini(&msg->th3);
   // th4
-  rosidl_runtime_c__float__Sequence__fini(&msg->th4);
 }
 
 bool
@@ -70,27 +43,19 @@ parallelbot_interfaces__msg__PBJointAngles__are_equal(const parallelbot_interfac
     return false;
   }
   // th1
-  if (!rosidl_runtime_c__float__Sequence__are_equal(
-      &(lhs->th1), &(rhs->th1)))
-  {
+  if (lhs->th1 != rhs->th1) {
     return false;
   }
   // th2
-  if (!rosidl_runtime_c__float__Sequence__are_equal(
-      &(lhs->th2), &(rhs->th2)))
-  {
+  if (lhs->th2 != rhs->th2) {
     return false;
   }
   // th3
-  if (!rosidl_runtime_c__float__Sequence__are_equal(
-      &(lhs->th3), &(rhs->th3)))
-  {
+  if (lhs->th3 != rhs->th3) {
     return false;
   }
   // th4
-  if (!rosidl_runtime_c__float__Sequence__are_equal(
-      &(lhs->th4), &(rhs->th4)))
-  {
+  if (lhs->th4 != rhs->th4) {
     return false;
   }
   return true;
@@ -105,29 +70,13 @@ parallelbot_interfaces__msg__PBJointAngles__copy(
     return false;
   }
   // th1
-  if (!rosidl_runtime_c__float__Sequence__copy(
-      &(input->th1), &(output->th1)))
-  {
-    return false;
-  }
+  output->th1 = input->th1;
   // th2
-  if (!rosidl_runtime_c__float__Sequence__copy(
-      &(input->th2), &(output->th2)))
-  {
-    return false;
-  }
+  output->th2 = input->th2;
   // th3
-  if (!rosidl_runtime_c__float__Sequence__copy(
-      &(input->th3), &(output->th3)))
-  {
-    return false;
-  }
+  output->th3 = input->th3;
   // th4
-  if (!rosidl_runtime_c__float__Sequence__copy(
-      &(input->th4), &(output->th4)))
-  {
-    return false;
-  }
+  output->th4 = input->th4;
   return true;
 }
 

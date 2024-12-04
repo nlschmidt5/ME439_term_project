@@ -40,21 +40,21 @@ void PBEndpoint_fini_function(void * message_memory)
 
 size_t size_function__PBEndpoint__xy(const void * untyped_member)
 {
-  (void)untyped_member;
-  return 2;
+  const auto * member = reinterpret_cast<const std::vector<float> *>(untyped_member);
+  return member->size();
 }
 
 const void * get_const_function__PBEndpoint__xy(const void * untyped_member, size_t index)
 {
   const auto & member =
-    *reinterpret_cast<const std::array<float, 2> *>(untyped_member);
+    *reinterpret_cast<const std::vector<float> *>(untyped_member);
   return &member[index];
 }
 
 void * get_function__PBEndpoint__xy(void * untyped_member, size_t index)
 {
   auto & member =
-    *reinterpret_cast<std::array<float, 2> *>(untyped_member);
+    *reinterpret_cast<std::vector<float> *>(untyped_member);
   return &member[index];
 }
 
@@ -76,6 +76,13 @@ void assign_function__PBEndpoint__xy(
   item = value;
 }
 
+void resize_function__PBEndpoint__xy(void * untyped_member, size_t size)
+{
+  auto * member =
+    reinterpret_cast<std::vector<float> *>(untyped_member);
+  member->resize(size);
+}
+
 static const ::rosidl_typesupport_introspection_cpp::MessageMember PBEndpoint_message_member_array[1] = {
   {
     "xy",  // name
@@ -84,7 +91,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember PBEndpoint_me
     nullptr,  // members of sub message
     false,  // is key
     true,  // is array
-    2,  // array size
+    0,  // array size
     false,  // is upper bound
     offsetof(parallelbot_interfaces::msg::PBEndpoint, xy),  // bytes offset in struct
     nullptr,  // default value
@@ -93,7 +100,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember PBEndpoint_me
     get_function__PBEndpoint__xy,  // get(index) function pointer
     fetch_function__PBEndpoint__xy,  // fetch(index, &value) function pointer
     assign_function__PBEndpoint__xy,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
+    resize_function__PBEndpoint__xy  // resize(index) function pointer
   }
 };
 

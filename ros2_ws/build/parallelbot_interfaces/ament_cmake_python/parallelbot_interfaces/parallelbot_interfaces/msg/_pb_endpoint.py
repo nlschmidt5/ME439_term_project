@@ -12,12 +12,12 @@ ros_python_check_fields = getenv('ROS_PYTHON_CHECK_FIELDS', default='')
 
 # Import statements for member types
 
+# Member 'xy'
+import array  # noqa: E402, I100
+
 import builtins  # noqa: E402, I100
 
 import math  # noqa: E402, I100
-
-# Member 'xy'
-import numpy  # noqa: E402, I100
 
 import rosidl_parser.definition  # noqa: E402, I100
 
@@ -72,13 +72,13 @@ class PBEndpoint(metaclass=Metaclass_PBEndpoint):
     ]
 
     _fields_and_field_types = {
-        'xy': 'float[2]',
+        'xy': 'sequence<float>',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
     # related to the data type of each of the components the message.
     SLOT_TYPES = (
-        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 2),  # noqa: E501
+        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('float')),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -90,11 +90,7 @@ class PBEndpoint(metaclass=Metaclass_PBEndpoint):
             assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        if 'xy' not in kwargs:
-            self.xy = numpy.zeros(2, dtype=numpy.float32)
-        else:
-            self.xy = numpy.array(kwargs.get('xy'), dtype=numpy.float32)
-            assert self.xy.shape == (2, )
+        self.xy = array.array('f', kwargs.get('xy', []))
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -126,7 +122,7 @@ class PBEndpoint(metaclass=Metaclass_PBEndpoint):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if all(self.xy != other.xy):
+        if self.xy != other.xy:
             return False
         return True
 
@@ -143,11 +139,9 @@ class PBEndpoint(metaclass=Metaclass_PBEndpoint):
     @xy.setter
     def xy(self, value):
         if self._check_fields:
-            if isinstance(value, numpy.ndarray):
-                assert value.dtype == numpy.float32, \
-                    "The 'xy' numpy.ndarray() must have the dtype of 'numpy.float32'"
-                assert value.size == 2, \
-                    "The 'xy' numpy.ndarray() must have a size of 2"
+            if isinstance(value, array.array):
+                assert value.typecode == 'f', \
+                    "The 'xy' array.array() must have the type code of 'f'"
                 self._xy = value
                 return
             from collections.abc import Sequence
@@ -160,8 +154,7 @@ class PBEndpoint(metaclass=Metaclass_PBEndpoint):
                   isinstance(value, UserList)) and
                  not isinstance(value, str) and
                  not isinstance(value, UserString) and
-                 len(value) == 2 and
                  all(isinstance(v, float) for v in value) and
                  all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'xy' field must be a set or sequence with length 2 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
-        self._xy = numpy.array(value, dtype=numpy.float32)
+                "The 'xy' field must be a set or sequence and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
+        self._xy = array.array('f', value)

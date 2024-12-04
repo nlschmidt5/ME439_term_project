@@ -118,11 +118,11 @@ inline const char * name<parallelbot_interfaces::msg::PBEndpoint>()
 
 template<>
 struct has_fixed_size<parallelbot_interfaces::msg::PBEndpoint>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct has_bounded_size<parallelbot_interfaces::msg::PBEndpoint>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct is_message<parallelbot_interfaces::msg::PBEndpoint>

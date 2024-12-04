@@ -11,10 +11,10 @@ parallelbot_interfaces__msg__PBJointAngles__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x46, 0x55, 0x20, 0xfd, 0x9f, 0x88, 0xd0, 0x64,
-      0xce, 0x27, 0x24, 0x82, 0xbc, 0x7c, 0x90, 0xc8,
-      0xcf, 0x2e, 0x6b, 0x6f, 0x5c, 0x7b, 0xf3, 0xe6,
-      0x63, 0xcc, 0x73, 0x8a, 0x59, 0xff, 0xe0, 0xa0,
+      0xc6, 0x87, 0x48, 0x29, 0x07, 0x6d, 0x95, 0x69,
+      0xba, 0x5a, 0x7a, 0x70, 0xe0, 0xd0, 0x0c, 0x1d,
+      0xb9, 0x3b, 0x48, 0x8c, 0xd8, 0x45, 0x7d, 0x5f,
+      0x9b, 0x3b, 0x26, 0x74, 0xdc, 0xcd, 0xb4, 0xae,
     }};
   return &hash;
 }
@@ -40,7 +40,7 @@ static rosidl_runtime_c__type_description__Field parallelbot_interfaces__msg__PB
   {
     {parallelbot_interfaces__msg__PBJointAngles__FIELD_NAME__th1, 3, 3},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT_UNBOUNDED_SEQUENCE,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
       0,
       0,
       {NULL, 0, 0},
@@ -50,7 +50,7 @@ static rosidl_runtime_c__type_description__Field parallelbot_interfaces__msg__PB
   {
     {parallelbot_interfaces__msg__PBJointAngles__FIELD_NAME__th2, 3, 3},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT_UNBOUNDED_SEQUENCE,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
       0,
       0,
       {NULL, 0, 0},
@@ -60,7 +60,7 @@ static rosidl_runtime_c__type_description__Field parallelbot_interfaces__msg__PB
   {
     {parallelbot_interfaces__msg__PBJointAngles__FIELD_NAME__th3, 3, 3},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT_UNBOUNDED_SEQUENCE,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
       0,
       0,
       {NULL, 0, 0},
@@ -70,7 +70,7 @@ static rosidl_runtime_c__type_description__Field parallelbot_interfaces__msg__PB
   {
     {parallelbot_interfaces__msg__PBJointAngles__FIELD_NAME__th4, 3, 3},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT_UNBOUNDED_SEQUENCE,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_FLOAT,
       0,
       0,
       {NULL, 0, 0},
@@ -99,10 +99,10 @@ parallelbot_interfaces__msg__PBJointAngles__get_type_description(
 }
 
 static char toplevel_type_raw_source[] =
-  "float32[] th1\n"
-  "float32[] th2\n"
-  "float32[] th3\n"
-  "float32[] th4";
+  "float32 th1\n"
+  "float32 th2\n"
+  "float32 th3\n"
+  "float32 th4";
 
 static char msg_encoding[] = "msg";
 
@@ -116,7 +116,7 @@ parallelbot_interfaces__msg__PBJointAngles__get_individual_type_description_sour
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {parallelbot_interfaces__msg__PBJointAngles__TYPE_NAME, 40, 40},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 56, 56},
+    {toplevel_type_raw_source, 48, 48},
   };
   return &source;
 }

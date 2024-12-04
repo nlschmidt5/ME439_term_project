@@ -1,0 +1,22 @@
+[1.166s] Invoking command in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot': PYTHONPATH=/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages:/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages:/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/parallelbot build --build-base /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot/build install --record /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot/install.log --single-version-externally-managed install_data
+[1.557s] running egg_info
+[1.593s] writing ../../build/parallelbot/parallelbot.egg-info/PKG-INFO
+[1.593s] writing dependency_links to ../../build/parallelbot/parallelbot.egg-info/dependency_links.txt
+[1.593s] writing entry points to ../../build/parallelbot/parallelbot.egg-info/entry_points.txt
+[1.593s] writing requirements to ../../build/parallelbot/parallelbot.egg-info/requires.txt
+[1.593s] writing top-level names to ../../build/parallelbot/parallelbot.egg-info/top_level.txt
+[1.657s] reading manifest file '../../build/parallelbot/parallelbot.egg-info/SOURCES.txt'
+[1.658s] adding license file 'LICENSE'
+[1.658s] writing manifest file '../../build/parallelbot/parallelbot.egg-info/SOURCES.txt'
+[1.659s] running build
+[1.659s] running build_py
+[1.659s] running install
+[1.669s] running install_lib
+[1.702s] running install_data
+[1.702s] running install_egg_info
+[1.733s] removing '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages/parallelbot-0.0.0-py3.12.egg-info' (and everything under it)
+[1.734s] Copying ../../build/parallelbot/parallelbot.egg-info to /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages/parallelbot-0.0.0-py3.12.egg-info
+[1.735s] running install_scripts
+[1.938s] Installing PB_kinematics script to /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/parallelbot
+[1.938s] writing list of installed files to '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot/install.log'
+[2.011s] Invoked command in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot' returned '0': PYTHONPATH=/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages:/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages:/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/parallelbot build --build-base /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot/build install --record /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot/install.log --single-version-externally-managed install_data

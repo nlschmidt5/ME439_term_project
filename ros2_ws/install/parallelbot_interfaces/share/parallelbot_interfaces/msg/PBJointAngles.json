@@ -6,7 +6,7 @@
         {
           "name": "th1",
           "type": {
-            "type_id": 154,
+            "type_id": 10,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -16,7 +16,7 @@
         {
           "name": "th2",
           "type": {
-            "type_id": 154,
+            "type_id": 10,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -26,7 +26,7 @@
         {
           "name": "th3",
           "type": {
-            "type_id": 154,
+            "type_id": 10,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -36,7 +36,7 @@
         {
           "name": "th4",
           "type": {
-            "type_id": 154,
+            "type_id": 10,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -50,7 +50,7 @@
   "type_hashes": [
     {
       "type_name": "parallelbot_interfaces/msg/PBJointAngles",
-      "hash_string": "RIHS01_465520fd9f88d064ce272482bc7c90c8cf2e6b6f5c7bf3e663cc738a59ffe0a0"
+      "hash_string": "RIHS01_c6874829076d9569ba5a7a70e0d00c1db93b488cd8457d5f9b3b2674dccdb4ae"
     }
   ]
 }

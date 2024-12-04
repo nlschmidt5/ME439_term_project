@@ -37,24 +37,16 @@ cdr_serialize(
   eprosima::fastcdr::Cdr & cdr)
 {
   // Member: th1
-  {
-    cdr << ros_message.th1;
-  }
+  cdr << ros_message.th1;
 
   // Member: th2
-  {
-    cdr << ros_message.th2;
-  }
+  cdr << ros_message.th2;
 
   // Member: th3
-  {
-    cdr << ros_message.th3;
-  }
+  cdr << ros_message.th3;
 
   // Member: th4
-  {
-    cdr << ros_message.th4;
-  }
+  cdr << ros_message.th4;
 
   return true;
 }
@@ -66,24 +58,16 @@ cdr_deserialize(
   parallelbot_interfaces::msg::PBJointAngles & ros_message)
 {
   // Member: th1
-  {
-    cdr >> ros_message.th1;
-  }
+  cdr >> ros_message.th1;
 
   // Member: th2
-  {
-    cdr >> ros_message.th2;
-  }
+  cdr >> ros_message.th2;
 
   // Member: th3
-  {
-    cdr >> ros_message.th3;
-  }
+  cdr >> ros_message.th3;
 
   // Member: th4
-  {
-    cdr >> ros_message.th4;
-  }
+  cdr >> ros_message.th4;
 
   return true;
 }
@@ -104,41 +88,29 @@ get_serialized_size(
 
   // Member: th1
   {
-    size_t array_size = ros_message.th1.size();
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    size_t item_size = sizeof(ros_message.th1[0]);
-    current_alignment += array_size * item_size +
+    size_t item_size = sizeof(ros_message.th1);
+    current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
   // Member: th2
   {
-    size_t array_size = ros_message.th2.size();
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    size_t item_size = sizeof(ros_message.th2[0]);
-    current_alignment += array_size * item_size +
+    size_t item_size = sizeof(ros_message.th2);
+    current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
   // Member: th3
   {
-    size_t array_size = ros_message.th3.size();
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    size_t item_size = sizeof(ros_message.th3[0]);
-    current_alignment += array_size * item_size +
+    size_t item_size = sizeof(ros_message.th3);
+    current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
   // Member: th4
   {
-    size_t array_size = ros_message.th4.size();
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    size_t item_size = sizeof(ros_message.th4[0]);
-    current_alignment += array_size * item_size +
+    size_t item_size = sizeof(ros_message.th4);
+    current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -167,44 +139,28 @@ max_serialized_size_PBJointAngles(
 
   // Member: th1
   {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
   // Member: th2
   {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
   // Member: th3
   {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
   // Member: th4
   {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
@@ -233,24 +189,16 @@ cdr_serialize_key(
   eprosima::fastcdr::Cdr & cdr)
 {
   // Member: th1
-  {
-    cdr << ros_message.th1;
-  }
+  cdr << ros_message.th1;
 
   // Member: th2
-  {
-    cdr << ros_message.th2;
-  }
+  cdr << ros_message.th2;
 
   // Member: th3
-  {
-    cdr << ros_message.th3;
-  }
+  cdr << ros_message.th3;
 
   // Member: th4
-  {
-    cdr << ros_message.th4;
-  }
+  cdr << ros_message.th4;
 
   return true;
 }
@@ -270,41 +218,29 @@ get_serialized_size_key(
 
   // Member: th1
   {
-    size_t array_size = ros_message.th1.size();
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    size_t item_size = sizeof(ros_message.th1[0]);
-    current_alignment += array_size * item_size +
+    size_t item_size = sizeof(ros_message.th1);
+    current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
   // Member: th2
   {
-    size_t array_size = ros_message.th2.size();
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    size_t item_size = sizeof(ros_message.th2[0]);
-    current_alignment += array_size * item_size +
+    size_t item_size = sizeof(ros_message.th2);
+    current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
   // Member: th3
   {
-    size_t array_size = ros_message.th3.size();
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    size_t item_size = sizeof(ros_message.th3[0]);
-    current_alignment += array_size * item_size +
+    size_t item_size = sizeof(ros_message.th3);
+    current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
   // Member: th4
   {
-    size_t array_size = ros_message.th4.size();
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    size_t item_size = sizeof(ros_message.th4[0]);
-    current_alignment += array_size * item_size +
+    size_t item_size = sizeof(ros_message.th4);
+    current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -332,11 +268,7 @@ max_serialized_size_key_PBJointAngles(
 
   // Member: th1
   {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
@@ -344,11 +276,7 @@ max_serialized_size_key_PBJointAngles(
 
   // Member: th2
   {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
@@ -356,11 +284,7 @@ max_serialized_size_key_PBJointAngles(
 
   // Member: th3
   {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
@@ -368,11 +292,7 @@ max_serialized_size_key_PBJointAngles(
 
   // Member: th4
   {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));

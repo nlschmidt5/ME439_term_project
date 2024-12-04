@@ -51,8 +51,6 @@ class PB_kinematics(Node):
         self.endpoint.y=yee
         self.get_logger().info("FK - publishing endpoint: x: "+ str(self.endpoint.x) +"y: "+str(self.endpoint.y))
         self.pub_FK.publish(self.endpoint)
-    
-
 
     def calc_IK(self, endpoint):
         L1=self.L1
@@ -62,36 +60,52 @@ class PB_kinematics(Node):
         E=self.E
         b=self.b
 
-        x=endpoint.x
-        y=endpoint.y
+        x=endpoint.xy[0]
+        y=endpoint.xy[1]
 
-        # find theta2
-        A2=x-b
-        B2=y
-        C2=-1/(2*R1)*(x**2 + y**2 + b**2 + R1**2 - R2**2 -E**2 - 2*x*b - 2*R2*E)
-        theta2=2*atan2( (-B2+sqrt(B2**2-(C2-A2)*(A2+C2))) , (C2-A2) ) 
         
-        # calculate theta4
-        theta4=acos(1/(R2+E)*(x-b-R1*cos(theta2)))
+        try: 
+            # find theta2 first
+            A2=x-b
+            B2=y
+            C2=-1/(2*R1)*(x**2 + y**2 + b**2 + R1**2 - R2**2 -E**2 - 2*x*b - 2*R2*E)
+            theta2=2*atan2( (-B2+sqrt(B2**2-(C2-A2)*(A2+C2))) , (C2-A2) ) 
+        except:
+            self.get_logger().info("IK Failed at theta2: Check to see if point is beyond workspace")
+        
+        try:
+            # calculate theta4
+            theta4=acos(1/(R2+E)*(x-b-R1*cos(theta2)))
+        except:
+            self.get_logger().info("IK Failed at theta4: Check to see if point is beyond workspace")
 
-        # find theta1
-        A1=2*L1*E*cos(theta4)-2*x*L1
-        B1=2*L1*E*sin(theta4)-2*y*L1
-        C1=x**2 + y**2 + L1**2 - L2**2 + E**2 - 2*x*E*cos(theta4)-2*y*E*sin(theta4)
+        try: 
 
-        theta1b=2*atan2( (-B1-sqrt(B1**2-(C1-A1)*(A1+C1))) , (C1-A1) ) 
+            # find theta1
+            A1=2*L1*E*cos(theta4)-2*x*L1
+            B1=2*L1*E*sin(theta4)-2*y*L1
+            C1=x**2 + y**2 + L1**2 - L2**2 + E**2 - 2*x*E*cos(theta4)-2*y*E*sin(theta4)
+            theta1=2*atan2( (-B1-sqrt(B1**2-(C1-A1)*(A1+C1))) , (C1-A1) ) 
+        except:
+            self.get_logger().info("IK Failed at theta1: Check to see if point is beyond workspace")
 
-        theta1=theta1b
+        try: 
+            # find theta3 for completeness
+            theta3=acos(1/L2*(x-L1*cos(theta1)-E*cos(theta4)))
+        except:
+            self.get_logger().info("IK Failed at theta3: Check to see if point is beyond workspace")
 
-        # find theta3 for completeness
-        theta3=acos(1/L2*(x-L1*cos(theta1)-E*cos(theta4)))
+        try: 
+            self.theta.th1=theta1
+            self.theta.th2=theta2
+            self.theta.th3=theta3
+            self.theta.th4=theta4
+            self.pub_IK.publish(self.theta)
 
-        self.theta.theta1=theta1
-        self.theta.theta2=theta2
-        self.theta.theta3=theta3
-        self.theta.theta4=theta4
-        self.get_logger().info("IK - publishing angles: x: "+ str(self.theta.theta1) +"y: "+str(self.theta.theta2))
-        self.pub_IK.publish(self.theta)
+            self.get_logger().info("IK - publishing angles: x: "+ str(self.theta.th1) +" y: "+str(self.theta.th2))
+        except:
+            self.get_logger().info("IK Failed! Check to see if point is beyond workspace")
+
 
 def main(args=None):
     try: 

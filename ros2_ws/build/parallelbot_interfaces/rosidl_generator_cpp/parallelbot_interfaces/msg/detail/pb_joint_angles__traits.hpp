@@ -30,73 +30,29 @@ inline void to_flow_style_yaml(
   out << "{";
   // member: th1
   {
-    if (msg.th1.size() == 0) {
-      out << "th1: []";
-    } else {
-      out << "th1: [";
-      size_t pending_items = msg.th1.size();
-      for (auto item : msg.th1) {
-        rosidl_generator_traits::value_to_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
+    out << "th1: ";
+    rosidl_generator_traits::value_to_yaml(msg.th1, out);
     out << ", ";
   }
 
   // member: th2
   {
-    if (msg.th2.size() == 0) {
-      out << "th2: []";
-    } else {
-      out << "th2: [";
-      size_t pending_items = msg.th2.size();
-      for (auto item : msg.th2) {
-        rosidl_generator_traits::value_to_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
+    out << "th2: ";
+    rosidl_generator_traits::value_to_yaml(msg.th2, out);
     out << ", ";
   }
 
   // member: th3
   {
-    if (msg.th3.size() == 0) {
-      out << "th3: []";
-    } else {
-      out << "th3: [";
-      size_t pending_items = msg.th3.size();
-      for (auto item : msg.th3) {
-        rosidl_generator_traits::value_to_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
+    out << "th3: ";
+    rosidl_generator_traits::value_to_yaml(msg.th3, out);
     out << ", ";
   }
 
   // member: th4
   {
-    if (msg.th4.size() == 0) {
-      out << "th4: []";
-    } else {
-      out << "th4: [";
-      size_t pending_items = msg.th4.size();
-      for (auto item : msg.th4) {
-        rosidl_generator_traits::value_to_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
+    out << "th4: ";
+    rosidl_generator_traits::value_to_yaml(msg.th4, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -110,19 +66,9 @@ inline void to_block_style_yaml(
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    if (msg.th1.size() == 0) {
-      out << "th1: []\n";
-    } else {
-      out << "th1:\n";
-      for (auto item : msg.th1) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "- ";
-        rosidl_generator_traits::value_to_yaml(item, out);
-        out << "\n";
-      }
-    }
+    out << "th1: ";
+    rosidl_generator_traits::value_to_yaml(msg.th1, out);
+    out << "\n";
   }
 
   // member: th2
@@ -130,19 +76,9 @@ inline void to_block_style_yaml(
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    if (msg.th2.size() == 0) {
-      out << "th2: []\n";
-    } else {
-      out << "th2:\n";
-      for (auto item : msg.th2) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "- ";
-        rosidl_generator_traits::value_to_yaml(item, out);
-        out << "\n";
-      }
-    }
+    out << "th2: ";
+    rosidl_generator_traits::value_to_yaml(msg.th2, out);
+    out << "\n";
   }
 
   // member: th3
@@ -150,19 +86,9 @@ inline void to_block_style_yaml(
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    if (msg.th3.size() == 0) {
-      out << "th3: []\n";
-    } else {
-      out << "th3:\n";
-      for (auto item : msg.th3) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "- ";
-        rosidl_generator_traits::value_to_yaml(item, out);
-        out << "\n";
-      }
-    }
+    out << "th3: ";
+    rosidl_generator_traits::value_to_yaml(msg.th3, out);
+    out << "\n";
   }
 
   // member: th4
@@ -170,19 +96,9 @@ inline void to_block_style_yaml(
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    if (msg.th4.size() == 0) {
-      out << "th4: []\n";
-    } else {
-      out << "th4:\n";
-      for (auto item : msg.th4) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "- ";
-        rosidl_generator_traits::value_to_yaml(item, out);
-        out << "\n";
-      }
-    }
+    out << "th4: ";
+    rosidl_generator_traits::value_to_yaml(msg.th4, out);
+    out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
@@ -232,11 +148,11 @@ inline const char * name<parallelbot_interfaces::msg::PBJointAngles>()
 
 template<>
 struct has_fixed_size<parallelbot_interfaces::msg::PBJointAngles>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct has_bounded_size<parallelbot_interfaces::msg::PBJointAngles>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct is_message<parallelbot_interfaces::msg::PBJointAngles>

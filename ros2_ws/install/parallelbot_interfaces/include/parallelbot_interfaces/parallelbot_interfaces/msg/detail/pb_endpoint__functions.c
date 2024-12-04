@@ -11,6 +11,10 @@
 #include "rcutils/allocator.h"
 
 
+// Include directives for member types
+// Member `xy`
+#include "rosidl_runtime_c/primitives_sequence_functions.h"
+
 bool
 parallelbot_interfaces__msg__PBEndpoint__init(parallelbot_interfaces__msg__PBEndpoint * msg)
 {
@@ -18,6 +22,10 @@ parallelbot_interfaces__msg__PBEndpoint__init(parallelbot_interfaces__msg__PBEnd
     return false;
   }
   // xy
+  if (!rosidl_runtime_c__float__Sequence__init(&msg->xy, 0)) {
+    parallelbot_interfaces__msg__PBEndpoint__fini(msg);
+    return false;
+  }
   return true;
 }
 
@@ -28,6 +36,7 @@ parallelbot_interfaces__msg__PBEndpoint__fini(parallelbot_interfaces__msg__PBEnd
     return;
   }
   // xy
+  rosidl_runtime_c__float__Sequence__fini(&msg->xy);
 }
 
 bool
@@ -37,10 +46,10 @@ parallelbot_interfaces__msg__PBEndpoint__are_equal(const parallelbot_interfaces_
     return false;
   }
   // xy
-  for (size_t i = 0; i < 2; ++i) {
-    if (lhs->xy[i] != rhs->xy[i]) {
-      return false;
-    }
+  if (!rosidl_runtime_c__float__Sequence__are_equal(
+      &(lhs->xy), &(rhs->xy)))
+  {
+    return false;
   }
   return true;
 }
@@ -54,8 +63,10 @@ parallelbot_interfaces__msg__PBEndpoint__copy(
     return false;
   }
   // xy
-  for (size_t i = 0; i < 2; ++i) {
-    output->xy[i] = input->xy[i];
+  if (!rosidl_runtime_c__float__Sequence__copy(
+      &(input->xy), &(output->xy)))
+  {
+    return false;
   }
   return true;
 }
