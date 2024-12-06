@@ -12,6 +12,9 @@ L1,L2,R1,R2,b,E=pbm.loadconfig(config)
 n=400
 x=np.array([])
 y=np.array([])
+theta1=np.array([])
+theta2=np.array([])
+
 theta1i, theta2i, xi, yi=pbm.get_random_position((R2+E), L1,L2,R1,R2,b,E)
 theta1g, theta2g, xg, yg=pbm.get_random_position((R2+E), L1,L2,R1,R2,b,E)
 qi=np.matrix([[xi],[yi]])
@@ -21,13 +24,15 @@ obstacle_stack=1
 path,Tree,Edge,Graph=pbm.PRM(qi,qg,n,K,obstacle_stack, (R2+E), L1,L2,R1,R2,b,E)
 
 # find theta1 and theta2 for each xy pair
-x=Tree[0,path]
-y=Tree[1,path]
+x=path[0,:].A1
+y=path[1,:].A1
 for i in range(len(x)):
     theta1_new, theta2_new = pbm.calc_IK(x[i],y[i],L1,L2,R1,R2,b,E)
-    theta1=np.hstack((theta1, theta1_new*180/np.pi))
-    theta2=np.hstack((theta2, theta2_new*180/np.pi))
+    theta1=np.hstack((theta1, theta1_new))
+    theta2=np.hstack((theta2, theta2_new))
 
+theta1=np.hstack((theta1, np.flip(theta1, 0)))
+theta2=np.hstack((theta2, np.flip(theta2, 0)))
 # animation functions
 def init_animation(theta1, theta2, L1, L2, R1, R2, E, b):
     fig, ax = plt.subplots()

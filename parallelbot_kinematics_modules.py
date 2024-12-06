@@ -331,56 +331,124 @@ def find_nearest_vertex(q, Tree, K):
 
     return neighbors, neighbors_id, distances
 
-def DK_findpath(Graph, init_idx, target_idx):
-    """
-    Find the shortest path in a weighted graph between init_idx and target_idx.
+# def DK_findpath(Graph, init_idx, target_idx):
+#     """
+#     Find the shortest path in a weighted graph between init_idx and target_idx.
 
-    Parameters:
-    Graph : ndarray
-        Symmetric weighted adjacency matrix of the graph.
-    init_idx : int
-        Index of the initial node.
-    target_idx : int
-        Index of the target node.
+#     Parameters:
+#     Graph : ndarray
+#         Symmetric weighted adjacency matrix of the graph.
+#     init_idx : int
+#         Index of the initial node.
+#     target_idx : int
+#         Index of the target node.
 
-    Returns:
-    path_dis : float
-        Distance of the shortest path.
-    path : list
-        List of indices representing the shortest path.
-    """
-    n = Graph.shape[0]
-    dist = np.full(n, np.inf)  # Initialize distances to infinity
-    prev = np.zeros(n, dtype=int)  # Array to store the previous node in the path
-    dist[init_idx] = 0
-    U = np.ones(n)  # Unvisited set, where 1 indicates unvisited
+#     Returns:
+#     path_dis : float
+#         Distance of the shortest path.
+#     path : list
+#         List of indices representing the shortest path.
+#     """
+#     n = Graph.shape[0]
+#     dist = np.full(n, np.inf)  # Initialize distances to infinity
+#     prev = np.zeros(n, dtype=int)  # Array to store the previous node in the path
+#     dist[init_idx] = 0
+#     U = np.ones(n)  # Unvisited set, where 1 indicates unvisited
 
-    while np.isfinite(U[target_idx]):  # Continue until target node is visited
-        D = np.multiply(dist, U)
+#     while np.isfinite(U[target_idx]):  # Continue until target node is visited
+#         D = np.multiply(dist, U)
         
-        c = np.argmin(D)  # Find the node with the smallest tentative distance
-        U[c] = np.inf  # Mark node as visited
+#         c = np.argmin(D)  # Find the node with the smallest tentative distance
+#         U[c] = np.inf  # Mark node as visited
 
-        for i in range(n):
-            alt = Graph[c, i] + dist[c]
-            if alt < dist[i]:  # Only consider edges with weight > 0
-                dist[i] = alt
-                prev[i] = c
+#         for i in range(n):
+#             alt = Graph[c, i] + dist[c]
+#             if alt < dist[i]:  # Only consider edges with weight > 0
+#                 dist[i] = alt
+#                 prev[i] = c
 
-    # Reconstruct the path
-    seq = []
-    i = target_idx
+#     # Reconstruct the path
+#     seq = []
+#     i = target_idx
 
-    while prev[i-1] != 0:
-        seq.append(prev[i])
-        i = prev[i]
+#     while prev[i-1] != 0:
+#         seq.append(prev[i])
+#         i = prev[i]
 
-    seq = seq[::-1]  # Reverse the sequence to start from init_idx
-    seq.append(target_idx)
-    path_dis = dist[target_idx-1]
-    path = seq
+#     seq = seq[::-1]  # Reverse the sequence to start from init_idx
+#     seq.append(target_idx)
+#     path_dis = dist[target_idx-1]
+#     path = seq
 
-    return path, path_dis
+#     return path, path_dis
+import numpy as np
+import heapq
+
+def dijkstra(graph, start, end):
+    """
+    Finds the shortest path in a graph represented as a NumPy adjacency matrix using Dijkstra's algorithm.
+    
+    :param graph: A NumPy 2D array where graph[i][j] represents the weight of the edge 
+                  from node i to node j, and `inf` indicates no edge.
+    :param start: The starting node index.
+    :param end: The target node index.
+    :return: A tuple containing:
+             - shortest_distance: The shortest distance from start to end
+             - path: A list of nodes representing the shortest path from start to end
+    """
+    num_nodes = graph.shape[0]
+    
+    # Priority queue for maintaining the min-heap of distances
+    priority_queue = []
+    heapq.heappush(priority_queue, (0, start))
+    
+    # Initialize distances with infinity and set distance to the start node as 0
+    distances = np.full(num_nodes, np.inf)
+    distances[start] = 0
+    
+    # Predecessors array for reconstructing the shortest path
+    predecessors = np.full(num_nodes, -1, dtype=int)
+    
+    # Set to keep track of visited nodes
+    visited = set()
+    
+    while priority_queue:
+        current_distance, current_node = heapq.heappop(priority_queue)
+        
+        # If we reach the end node, reconstruct the path and return
+        if current_node == end:
+            path = []
+            while current_node != -1:
+                path.insert(0, current_node)
+                current_node = predecessors[current_node]
+            return current_distance, path
+        
+        # Skip if the node has been visited
+        if current_node in visited:
+            continue
+        
+        # Mark the current node as visited
+        visited.add(current_node)
+        
+        # Explore neighbors
+        for neighbor in range(num_nodes):
+            weight = graph[current_node][neighbor]
+            if weight == np.inf or neighbor in visited:
+                continue
+            
+            new_distance = current_distance + weight
+            # Update distance if a shorter path is found
+            if new_distance < distances[neighbor]:
+                distances[neighbor] = new_distance
+                predecessors[neighbor] = current_node
+                heapq.heappush(priority_queue, (new_distance, neighbor))
+    
+    # If we exhaust the queue without finding the end node, return infinity and an empty path
+    return np.inf, []
+
+
+
+
 
 def PRM(qI,qG,num_sample,K,obstacle_stack, scale,L1,L2,R1,R2,b,E):
     # qI: initial configuration (x-y coords)
@@ -419,9 +487,9 @@ def PRM(qI,qG,num_sample,K,obstacle_stack, scale,L1,L2,R1,R2,b,E):
     init_idx = 0
     target_idx = np.size(Vertex, 1)-1
 
-    path_idx, path_dis = DK_findpath(Graph, init_idx, target_idx)
+    shortest_distance, path = dijkstra(Graph, init_idx, target_idx)
 
-    path_out = Vertex[:,path_idx]
+    path_out = Vertex[:,path]
     Tree_out = Vertex
     Edge_out = Edge
     Graph_out = Graph
