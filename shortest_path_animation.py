@@ -1,5 +1,5 @@
-##
-# more advanced animation script. construct a time dependent x and y array, 
+## NOT WORKING
+# more advanced animation script.  
 # calculate the inverse kinematics, 
 # and then plot the FK results
 import parallelbot_kinematics_modules as pbm
@@ -9,29 +9,24 @@ from matplotlib import pyplot as plt
 
 config=5
 L1,L2,R1,R2,b,E=pbm.loadconfig(config)
-
-# draw a circle
-t=np.linspace(0, 2*np.pi, 90)
-# x=20*np.cos(t)-20
-# y=20*np.sin(t)+140
-
-
-x=np.hstack((np.linspace(-45, -45, 20), np.linspace(-45, -45, 20) ))
-y=np.hstack((np.linspace(40, 160, 20), np.linspace(160, 40, 20) ))
-# x=np.hstack((np.linspace(-45, 100, 60), np.linspace(100, -45, 60) ))
-# y=np.hstack((np.linspace(100, 100, 60), np.linspace(100, 100, 60) ))
-
+n=400
+x=np.array([])
+y=np.array([])
+theta1i, theta2i, xi, yi=pbm.get_random_position((R2+E), L1,L2,R1,R2,b,E)
+theta1g, theta2g, xg, yg=pbm.get_random_position((R2+E), L1,L2,R1,R2,b,E)
+qi=np.matrix([[xi],[yi]])
+qg=np.matrix([[xg],[yg]])
+K=10
+obstacle_stack=1
+path,Tree,Edge,Graph=pbm.PRM(qi,qg,n,K,obstacle_stack, (R2+E), L1,L2,R1,R2,b,E)
 
 # find theta1 and theta2 for each xy pair
-theta1=np.array([])
-theta2=np.array([])
-theta1_limit=np.array([])
-theta2_limit=np.array([])
+x=Tree[0,path]
+y=Tree[1,path]
 for i in range(len(x)):
-    theta1_new, theta2_new = pbm.calc_IK_limited(x[i],y[i],L1,L2,R1,R2,b,E)
-    theta1=np.hstack((theta1, theta1_new))
-    theta2=np.hstack((theta2, theta2_new))
-
+    theta1_new, theta2_new = pbm.calc_IK(x[i],y[i],L1,L2,R1,R2,b,E)
+    theta1=np.hstack((theta1, theta1_new*180/np.pi))
+    theta2=np.hstack((theta2, theta2_new*180/np.pi))
 
 # animation functions
 def init_animation(theta1, theta2, L1, L2, R1, R2, E, b):
@@ -63,4 +58,4 @@ def animate_arm(fig, animate_fun, theta1):
 # initialize the animation, and animate
 fig, ax, link1, link2, link3, link4 = init_animation(theta1, theta2, L1, L2, R1, R2, E, b)
 ani=animate_arm(fig, animate_fun, theta1)
-# ani.save(filename="line.gif", writer="pillow")
+# ani.save(filename="line.gif", writer="pillow")    

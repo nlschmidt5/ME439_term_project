@@ -21,8 +21,8 @@ class PB_kinematics(Node):
         self.L2 = self.declare_parameter('L2',90).value
         self.R1 =self.declare_parameter('R1',55).value
         self.R2 =self.declare_parameter('R2',140).value
+        self.b = self.declare_parameter('b',90).value
         self.E = self.declare_parameter('E',30).value
-        self.b = self.declare_parameter('b',50).value
         
         #initialize message types
         self.theta=PBJointAngles()
@@ -50,7 +50,7 @@ class PB_kinematics(Node):
             yee= R1*sin(theta2) + R2*sin(theta4) + E*sin(theta4)
             self.endpoint.xy=[xee, yee]
 
-            self.get_logger().info("FK - publishing endpoint: x: "+ str(round(xee, 3)) +"y: "+str(round(yee, 3)))
+            self.get_logger().info("FK - publishing endpoint: x: "+ str(round(xee, 3)) +" y: "+str(round(yee, 3)))
             self.pub_FK.publish(self.endpoint)
         except: 
             self.get_logger().info("FK failed! May be beyond workspace")

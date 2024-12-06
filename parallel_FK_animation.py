@@ -10,8 +10,8 @@ import parallelbot_kinematics_modules as pbm
 configuration=5
 L1,L2,R1,R2,b,E=pbm.loadconfig(configuration)
 # first theta1 moves from 0 to 90, then theta2 moves from 0 to 90
-theta1=np.hstack((np.linspace(25, 75, 20), np.linspace(75, 25, 20) ))
-theta2=np.hstack((np.linspace(0, 25, 20), np.linspace(25, 0, 20) ))
+theta1=np.hstack((np.linspace(90, 0, 60), np.linspace(0, 90, 60) ))
+theta2=np.hstack((np.linspace(0, 90, 60), np.linspace(90, 0, 60) ))
 
 # initialize the links and lines
 def init_animation(theta1, theta2, L1, L2, R1, R2, E, b):
