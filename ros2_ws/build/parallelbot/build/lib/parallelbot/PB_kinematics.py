@@ -17,40 +17,44 @@ class PB_kinematics(Node):
         self.pub_IK = self.create_publisher(PBJointAngles, '/joint_angles',1)
         
         # define robot parameters
-        self.L1 = self.declare_parameter('L1',1.414).value
-        self.L2 = self.declare_parameter('L2',2).value
-        self.R1 =self.declare_parameter('R1',1.414).value
-        self.R2 =self.declare_parameter('R2',2.828).value
-        self.E = self.declare_parameter('E',2.828).value
-        self.b = self.declare_parameter('b',2).value
+        self.L1 = self.declare_parameter('L1',55).value
+        self.L2 = self.declare_parameter('L2',90).value
+        self.R1 =self.declare_parameter('R1',55).value
+        self.R2 =self.declare_parameter('R2',140).value
+        self.b = self.declare_parameter('b',90).value
+        self.E = self.declare_parameter('E',30).value
         
-        self.theta=PBJointAngles
-        self.endpoint=PBEndpoint
+        #initialize message types
+        self.theta=PBJointAngles()
+        self.endpoint=PBEndpoint()
 
     def calc_FK(self, theta):
 
         # takes in robot parameters and joint angles (in degrees), 
         # returns links start and end locations for plotting purposes
-        theta1=theta[0]
-        theta2=theta[1]
+        theta1=theta.th1
+        theta2=theta.th2
         L1=self.L1
         L2=self.L2
         R1=self.R1
         R2=self.R2
         E=self.E
         b=self.b
-        
-        A=1/L2**2*(2*b*R2 + 2*R1*R2*cos(theta2) - 2*L1*R2*cos(theta1))
-        B=1/L2**2*(2*R1*R2*sin(theta2) - 2*L1*R2*sin(theta1))
-        C=1/L2**2*(L1**2 + R1**2 + R2**2 + b**2 + 2*b*R1*cos(theta2) - 2*b*L1*cos(theta1) - 2*L1*R1*cos(theta2-theta1))-1
+        try: 
+            A=1/L2**2*(2*b*R2 + 2*R1*R2*cos(theta2) - 2*L1*R2*cos(theta1))
+            B=1/L2**2*(2*R1*R2*sin(theta2) - 2*L1*R2*sin(theta1))
+            C=1/L2**2*(L1**2 + R1**2 + R2**2 + b**2 + 2*b*R1*cos(theta2) - 2*b*L1*cos(theta1) - 2*L1*R1*cos(theta2-theta1))-1
 
-        theta4=2*pi+2*atan2( (-B-sqrt(B**2-(C-A)*(A+C))) , (C-A) )
-        xee= b + R1*cos(theta2) + R2*cos(theta4) + E*cos(theta4)
-        yee= R1*sin(theta2) + R2*sin(theta4) + E*sin(theta4)
-        self.endpoint.x=xee
-        self.endpoint.y=yee
-        self.get_logger().info("FK - publishing endpoint: x: "+ str(self.endpoint.x) +"y: "+str(self.endpoint.y))
-        self.pub_FK.publish(self.endpoint)
+            theta4=2*pi+2*atan2( (-B-sqrt(B**2-(C-A)*(A+C))) , (C-A) )
+            xee= b + R1*cos(theta2) + R2*cos(theta4) + E*cos(theta4)
+            yee= R1*sin(theta2) + R2*sin(theta4) + E*sin(theta4)
+            self.endpoint.xy=[xee, yee]
+
+            self.get_logger().info("FK - publishing endpoint: x: "+ str(round(xee, 3)) +" y: "+str(round(yee, 3)))
+            self.pub_FK.publish(self.endpoint)
+        except: 
+            self.get_logger().info("FK failed! May be beyond workspace")
+            self.get_logger().error(traceback.format_exc())
 
     def calc_IK(self, endpoint):
         L1=self.L1
@@ -102,9 +106,10 @@ class PB_kinematics(Node):
             self.theta.th4=theta4
             self.pub_IK.publish(self.theta)
 
-            self.get_logger().info("IK - publishing angles: x: "+ str(self.theta.th1) +" y: "+str(self.theta.th2))
+            self.get_logger().info("IK - publishing angles: th1: "+ str(round(self.theta.th1, 3)) +" th2: "+str(round(self.theta.th2, 3)))
         except:
-            self.get_logger().info("IK Failed! Check to see if point is beyond workspace")
+            self.get_logger().info("Failed to publish angles.")
+            self.get_logger().error(traceback.format_exc())
 
 
 def main(args=None):

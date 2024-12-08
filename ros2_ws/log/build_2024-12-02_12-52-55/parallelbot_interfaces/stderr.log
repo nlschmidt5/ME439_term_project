@@ -1,9 +1,0 @@
-[31mCMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:53 (message):
-  ament_package_xml() package name 'parallelbot_interfaces' in '/package.xml'
-  does not match current PROJECT_NAME 'xarmrob_interfaces'.  You must call
-  project() with the same package name before.
-Call Stack (most recent call first):
-  /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:220 (ament_package_xml)
-  CMakeLists.txt:27 (rosidl_generate_interfaces)
-
-[0m

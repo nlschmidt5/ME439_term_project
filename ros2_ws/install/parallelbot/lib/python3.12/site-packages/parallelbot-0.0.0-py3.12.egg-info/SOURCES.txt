@@ -10,7 +10,7 @@ setup.py
 ../../build/parallelbot/parallelbot.egg-info/top_level.txt
 ../../build/parallelbot/parallelbot.egg-info/zip-safe
 parallelbot/PB_kinematics.py
-parallelbot/PB_servo_cmd.py
+parallelbot/ServoCommander.py
 parallelbot/__init__.py
 resource/parallelbot
 test/test_copyright.py

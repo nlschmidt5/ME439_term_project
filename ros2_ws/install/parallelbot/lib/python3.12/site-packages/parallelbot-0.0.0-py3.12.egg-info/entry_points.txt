@@ -1,2 +1,3 @@
 [console_scripts]
 PB_kinematics = parallelbot.PB_kinematics:main
+ServoCommander = parallelbot.ServoCommander:main

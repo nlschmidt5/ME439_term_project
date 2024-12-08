@@ -1,0 +1,307 @@
+[0.023s] Invoking command in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot:/opt/ros/jazzy /usr/bin/cmake /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot_interfaces -DCMAKE_INSTALL_PREFIX=/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces
+[0.183s] -- The C compiler identification is GNU 13.2.0
+[0.296s] -- The CXX compiler identification is GNU 13.2.0
+[0.322s] -- Detecting C compiler ABI info
+[0.418s] -- Detecting C compiler ABI info - done
+[0.430s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.430s] -- Detecting C compile features
+[0.431s] -- Detecting C compile features - done
+[0.440s] -- Detecting CXX compiler ABI info
+[0.659s] -- Detecting CXX compiler ABI info - done
+[0.673s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.673s] -- Detecting CXX compile features
+[0.674s] -- Detecting CXX compile features - done
+[0.679s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.852s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.068s] -- Found example_interfaces: 0.12.0 (/opt/ros/jazzy/share/example_interfaces/cmake)
+[1.126s] -- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.145s] -- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.165s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.186s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.310s] -- Found geometry_msgs: 5.3.5 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[1.367s] -- Found sensor_msgs: 5.3.5 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[1.398s] -- Found nav_msgs: 5.3.5 (/opt/ros/jazzy/share/nav_msgs/cmake)
+[1.434s] -- Found map_msgs: 2.4.1 (/opt/ros/jazzy/share/map_msgs/cmake)
+[1.474s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[1.492s] -- Found rosidl_adapter: 4.6.4 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[2.269s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[3.260s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.660s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.664s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[3.883s] -- Found PythonExtra: /usr/bin/python3  
+[4.434s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[4.490s] -- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[4.544s] -- Added test 'flake8' to check Python code syntax and style conventions
+[4.545s] -- Configured 'flake8' exclude dirs and/or files: 
+[4.547s] -- Added test 'lint_cmake' to check CMake code style
+[4.549s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[4.553s] -- Added test 'xmllint' to check XML markup files
+[4.561s] -- Configuring done (4.5s)
+[4.645s] -- Generating done (0.1s)
+[4.650s] -- Build files have been written to: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces
+[4.660s] Invoked command in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot:/opt/ros/jazzy /usr/bin/cmake /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot_interfaces -DCMAKE_INSTALL_PREFIX=/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces
+[4.661s] Invoking command in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot:/opt/ros/jazzy /usr/bin/cmake --build /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces -- -j8 -l8
+[4.711s] [  1%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[4.726s] [  1%] Built target ament_cmake_python_copy_parallelbot_interfaces
+[5.057s] [  1%] Built target parallelbot_interfaces__rosidl_generator_type_description
+[5.067s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[5.078s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[5.089s] running egg_info
+[5.090s] creating parallelbot_interfaces.egg-info
+[5.130s] writing parallelbot_interfaces.egg-info/PKG-INFO
+[5.130s] writing dependency_links to parallelbot_interfaces.egg-info/dependency_links.txt
+[5.131s] writing top-level names to parallelbot_interfaces.egg-info/top_level.txt
+[5.131s] writing manifest file 'parallelbot_interfaces.egg-info/SOURCES.txt'
+[5.239s] reading manifest file 'parallelbot_interfaces.egg-info/SOURCES.txt'
+[5.239s] writing manifest file 'parallelbot_interfaces.egg-info/SOURCES.txt'
+[5.272s] [  5%] Built target ament_cmake_python_build_parallelbot_interfaces_egg
+[5.527s] [  5%] Built target parallelbot_interfaces__cpp
+[5.603s] [  7%] [32mBuilding C object CMakeFiles/parallelbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/parallelbot_interfaces/msg/detail/pb_joint_angles__type_support.c.o[0m
+[5.605s] [ 12%] [32mBuilding C object CMakeFiles/parallelbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/parallelbot_interfaces/msg/detail/pb_endpoint__description.c.o[0m
+[5.605s] [ 14%] [32mBuilding C object CMakeFiles/parallelbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/parallelbot_interfaces/msg/detail/pb_endpoint__functions.c.o[0m
+[5.606s] [ 14%] [32mBuilding C object CMakeFiles/parallelbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/parallelbot_interfaces/msg/detail/pb_joint_command__description.c.o[0m
+[5.606s] [ 12%] [32mBuilding C object CMakeFiles/parallelbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/parallelbot_interfaces/msg/detail/pb_endpoint__type_support.c.o[0m
+[5.606s] [ 18%] [32mBuilding C object CMakeFiles/parallelbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/parallelbot_interfaces/msg/detail/pb_joint_angles__functions.c.o[0m
+[5.606s] [ 20%] [32mBuilding C object CMakeFiles/parallelbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/parallelbot_interfaces/msg/detail/pb_joint_angles__description.c.o[0m
+[5.606s] [ 20%] [32mBuilding C object CMakeFiles/parallelbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/parallelbot_interfaces/msg/detail/pb_joint_command__functions.c.o[0m
+[5.662s] [ 22%] [32mBuilding C object CMakeFiles/parallelbot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/parallelbot_interfaces/msg/detail/pb_joint_command__type_support.c.o[0m
+[5.703s] [ 24%] [32m[1mLinking C shared library libparallelbot_interfaces__rosidl_generator_c.so[0m
+[5.801s] [ 24%] Built target parallelbot_interfaces__rosidl_generator_c
+[5.816s] [ 25%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[5.816s] [ 27%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[5.821s] [ 33%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[5.821s] [ 33%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[5.822s] [ 33%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[5.822s] [ 35%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[6.318s] [ 38%] [32mBuilding C object CMakeFiles/parallelbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/parallelbot_interfaces/msg/detail/pb_endpoint__type_support.c.o[0m
+[6.320s] [ 40%] [32mBuilding C object CMakeFiles/parallelbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/parallelbot_interfaces/msg/detail/pb_joint_angles__type_support.c.o[0m
+[6.320s] [ 40%] [32mBuilding C object CMakeFiles/parallelbot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/parallelbot_interfaces/msg/detail/pb_joint_command__type_support.c.o[0m
+[6.408s] [ 44%] [32mBuilding CXX object CMakeFiles/parallelbot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/parallelbot_interfaces/msg/pb_joint_command__type_support.cpp.o[0m
+[6.408s] [ 46%] [32mBuilding CXX object CMakeFiles/parallelbot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/parallelbot_interfaces/msg/pb_endpoint__type_support.cpp.o[0m
+[6.409s] [ 46%] [32mBuilding CXX object CMakeFiles/parallelbot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/parallelbot_interfaces/msg/pb_joint_angles__type_support.cpp.o[0m
+[6.414s] [ 48%] [32m[1mLinking C shared library libparallelbot_interfaces__rosidl_typesupport_introspection_c.so[0m
+[6.462s] [ 50%] [32mBuilding CXX object CMakeFiles/parallelbot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/parallelbot_interfaces/msg/pb_joint_angles__type_support.cpp.o[0m
+[6.480s] [ 50%] Built target parallelbot_interfaces__rosidl_typesupport_introspection_c
+[6.569s] [ 51%] [32mBuilding CXX object CMakeFiles/parallelbot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/parallelbot_interfaces/msg/pb_endpoint__type_support.cpp.o[0m
+[6.576s] [ 53%] [32mBuilding CXX object CMakeFiles/parallelbot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/parallelbot_interfaces/msg/pb_joint_command__type_support.cpp.o[0m
+[6.584s] [ 55%] [32mBuilding CXX object CMakeFiles/parallelbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/parallelbot_interfaces/msg/detail/pb_joint_angles__type_support.cpp.o[0m
+[6.599s] [ 57%] [32mBuilding CXX object CMakeFiles/parallelbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/parallelbot_interfaces/msg/detail/pb_joint_angles__type_support_c.cpp.o[0m
+[6.631s] [ 59%] [32mBuilding CXX object CMakeFiles/parallelbot_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/parallelbot_interfaces/msg/detail/dds_fastrtps/pb_joint_angles__type_support.cpp.o[0m
+[6.692s] [ 61%] [32mBuilding CXX object CMakeFiles/parallelbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/parallelbot_interfaces/msg/detail/pb_endpoint__type_support_c.cpp.o[0m
+[6.692s] [ 62%] [32m[1mLinking CXX shared library libparallelbot_interfaces__rosidl_typesupport_c.so[0m
+[6.770s] [ 62%] Built target parallelbot_interfaces__rosidl_typesupport_c
+[6.787s] [ 64%] [32mBuilding CXX object CMakeFiles/parallelbot_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/parallelbot_interfaces/msg/detail/dds_fastrtps/pb_endpoint__type_support.cpp.o[0m
+[7.274s] [ 68%] [32mBuilding CXX object CMakeFiles/parallelbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/parallelbot_interfaces/msg/detail/pb_endpoint__type_support.cpp.o[0m
+[7.274s] [ 68%] [32mBuilding CXX object CMakeFiles/parallelbot_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/parallelbot_interfaces/msg/detail/dds_fastrtps/pb_joint_command__type_support.cpp.o[0m
+[7.305s] [ 70%] [32m[1mLinking CXX shared library libparallelbot_interfaces__rosidl_typesupport_cpp.so[0m
+[7.423s] [ 70%] Built target parallelbot_interfaces__rosidl_typesupport_cpp
+[7.473s] [ 72%] [32mBuilding CXX object CMakeFiles/parallelbot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/parallelbot_interfaces/msg/detail/pb_joint_command__type_support.cpp.o[0m
+[7.520s] [ 74%] [32mBuilding CXX object CMakeFiles/parallelbot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/parallelbot_interfaces/msg/detail/pb_joint_command__type_support_c.cpp.o[0m
+[8.403s] [ 75%] [32m[1mLinking CXX shared library libparallelbot_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[8.489s] [ 77%] [32m[1mLinking CXX shared library libparallelbot_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[8.514s] [ 77%] Built target parallelbot_interfaces__rosidl_typesupport_introspection_cpp
+[8.608s] [ 79%] [32m[1mLinking CXX shared library libparallelbot_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[8.621s] [ 79%] Built target parallelbot_interfaces__rosidl_typesupport_fastrtps_c
+[8.757s] [ 79%] Built target parallelbot_interfaces__rosidl_typesupport_fastrtps_cpp
+[8.784s] [ 79%] Built target parallelbot_interfaces
+[8.808s] [ 81%] [34m[1mGenerating Python code for ROS interfaces[0m
+[9.372s] [ 81%] Built target parallelbot_interfaces__py
+[9.421s] [ 87%] [32mBuilding C object CMakeFiles/parallelbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/parallelbot_interfaces/msg/_pb_joint_command_s.c.o[0m
+[9.421s] [ 87%] [32mBuilding C object CMakeFiles/parallelbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/parallelbot_interfaces/msg/_pb_joint_angles_s.c.o[0m
+[9.421s] [ 87%] [32mBuilding C object CMakeFiles/parallelbot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/parallelbot_interfaces/msg/_pb_endpoint_s.c.o[0m
+[9.638s] [ 88%] [32m[1mLinking C shared library libparallelbot_interfaces__rosidl_generator_py.so[0m
+[9.686s] [ 88%] Built target parallelbot_interfaces__rosidl_generator_py
+[9.706s] [ 92%] [32mBuilding C object CMakeFiles/parallelbot_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/parallelbot_interfaces/_parallelbot_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[9.706s] [ 94%] [32mBuilding C object CMakeFiles/parallelbot_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/parallelbot_interfaces/_parallelbot_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[9.706s] [ 94%] [32mBuilding C object CMakeFiles/parallelbot_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/parallelbot_interfaces/_parallelbot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[9.871s] [ 96%] [32m[1mLinking C shared module rosidl_generator_py/parallelbot_interfaces/parallelbot_interfaces_s__rosidl_typesupport_introspection_c.so[0m
+[9.873s] [100%] [32m[1mLinking C shared module rosidl_generator_py/parallelbot_interfaces/parallelbot_interfaces_s__rosidl_typesupport_c.so[0m
+[9.873s] [100%] [32m[1mLinking C shared module rosidl_generator_py/parallelbot_interfaces/parallelbot_interfaces_s__rosidl_typesupport_fastrtps_c.so[0m
+[9.927s] [100%] Built target parallelbot_interfaces_s__rosidl_typesupport_fastrtps_c
+[9.927s] [100%] Built target parallelbot_interfaces_s__rosidl_typesupport_introspection_c
+[9.927s] [100%] Built target parallelbot_interfaces_s__rosidl_typesupport_c
+[9.939s] Invoked command in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot:/opt/ros/jazzy /usr/bin/cmake --build /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces -- -j8 -l8
+[10.040s] Invoking command in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot:/opt/ros/jazzy /usr/bin/cmake --install /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces
+[10.051s] -- Install configuration: ""
+[10.051s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/ament_index/resource_index/rosidl_interfaces/parallelbot_interfaces
+[10.052s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/msg/PBJointAngles.json
+[10.052s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/msg/PBEndpoint.json
+[10.052s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/msg/PBJointCommand.json
+[10.052s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces
+[10.053s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg
+[10.053s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/pb_joint_command.h
+[10.053s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail
+[10.053s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_endpoint__functions.c
+[10.053s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_command__struct.h
+[10.053s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_endpoint__struct.h
+[10.054s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_endpoint__type_support.c
+[10.054s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_command__type_support.c
+[10.054s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_command__type_support.h
+[10.054s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_command__functions.c
+[10.054s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_endpoint__description.c
+[10.055s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_endpoint__type_support.h
+[10.055s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_angles__description.c
+[10.055s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_endpoint__functions.h
+[10.055s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_command__functions.h
+[10.055s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_command__description.c
+[10.056s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_angles__functions.c
+[10.056s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_angles__functions.h
+[10.056s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_angles__struct.h
+[10.056s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_angles__type_support.c
+[10.056s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_angles__type_support.h
+[10.056s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/rosidl_generator_c__visibility_control.h
+[10.057s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/pb_endpoint.h
+[10.057s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/pb_joint_angles.h
+[10.057s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/environment/library_path.sh
+[10.057s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/environment/library_path.dsv
+[10.057s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/libparallelbot_interfaces__rosidl_generator_c.so
+[10.058s] -- Set non-toolchain portion of runtime path of "/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/libparallelbot_interfaces__rosidl_generator_c.so" to ""
+[10.058s] -- Up-to-date: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces
+[10.058s] -- Up-to-date: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg
+[10.058s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[10.058s] -- Up-to-date: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail
+[10.059s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_angles__rosidl_typesupport_fastrtps_c.h
+[10.059s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_command__rosidl_typesupport_fastrtps_c.h
+[10.059s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_endpoint__rosidl_typesupport_fastrtps_c.h
+[10.059s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/libparallelbot_interfaces__rosidl_typesupport_fastrtps_c.so
+[10.059s] -- Set non-toolchain portion of runtime path of "/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/libparallelbot_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[10.060s] -- Up-to-date: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces
+[10.060s] -- Up-to-date: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg
+[10.060s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/pb_joint_angles.hpp
+[10.060s] -- Up-to-date: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail
+[10.060s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_angles__traits.hpp
+[10.060s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_endpoint__builder.hpp
+[10.060s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_endpoint__type_support.hpp
+[10.060s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_command__traits.hpp
+[10.061s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_command__type_support.hpp
+[10.061s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_endpoint__struct.hpp
+[10.061s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_angles__type_support.hpp
+[10.062s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_angles__builder.hpp
+[10.062s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_endpoint__traits.hpp
+[10.062s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_angles__struct.hpp
+[10.062s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_command__builder.hpp
+[10.063s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_command__struct.hpp
+[10.063s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/pb_endpoint.hpp
+[10.063s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[10.063s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/pb_joint_command.hpp
+[10.064s] -- Up-to-date: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces
+[10.064s] -- Up-to-date: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg
+[10.064s] -- Up-to-date: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail
+[10.064s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_endpoint__rosidl_typesupport_fastrtps_cpp.hpp
+[10.064s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_angles__rosidl_typesupport_fastrtps_cpp.hpp
+[10.064s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/dds_fastrtps
+[10.065s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_command__rosidl_typesupport_fastrtps_cpp.hpp
+[10.065s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[10.065s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/libparallelbot_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[10.066s] -- Set non-toolchain portion of runtime path of "/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/libparallelbot_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[10.066s] -- Up-to-date: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces
+[10.066s] -- Up-to-date: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg
+[10.067s] -- Up-to-date: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail
+[10.067s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_endpoint__type_support.c
+[10.067s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_command__type_support.c
+[10.067s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_endpoint__rosidl_typesupport_introspection_c.h
+[10.067s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_angles__rosidl_typesupport_introspection_c.h
+[10.068s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_angles__type_support.c
+[10.068s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_command__rosidl_typesupport_introspection_c.h
+[10.068s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[10.068s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/libparallelbot_interfaces__rosidl_typesupport_introspection_c.so
+[10.069s] -- Set non-toolchain portion of runtime path of "/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/libparallelbot_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[10.069s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/libparallelbot_interfaces__rosidl_typesupport_c.so
+[10.069s] -- Set non-toolchain portion of runtime path of "/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/libparallelbot_interfaces__rosidl_typesupport_c.so" to ""
+[10.069s] -- Up-to-date: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces
+[10.069s] -- Up-to-date: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg
+[10.070s] -- Up-to-date: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail
+[10.070s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_command__rosidl_typesupport_introspection_cpp.hpp
+[10.070s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_command__type_support.cpp
+[10.070s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_angles__rosidl_typesupport_introspection_cpp.hpp
+[10.070s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_endpoint__type_support.cpp
+[10.070s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_joint_angles__type_support.cpp
+[10.070s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/include/parallelbot_interfaces/parallelbot_interfaces/msg/detail/pb_endpoint__rosidl_typesupport_introspection_cpp.hpp
+[10.071s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/libparallelbot_interfaces__rosidl_typesupport_introspection_cpp.so
+[10.071s] -- Set non-toolchain portion of runtime path of "/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/libparallelbot_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[10.071s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/libparallelbot_interfaces__rosidl_typesupport_cpp.so
+[10.072s] -- Set non-toolchain portion of runtime path of "/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/libparallelbot_interfaces__rosidl_typesupport_cpp.so" to ""
+[10.072s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/environment/pythonpath.sh
+[10.072s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/environment/pythonpath.dsv
+[10.072s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces-0.0.0-py3.12.egg-info
+[10.072s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt
+[10.072s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt
+[10.073s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces-0.0.0-py3.12.egg-info/PKG-INFO
+[10.073s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces-0.0.0-py3.12.egg-info/top_level.txt
+[10.073s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces
+[10.073s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/msg
+[10.073s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/msg/_pb_joint_angles.py
+[10.074s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/msg/_pb_endpoint.py
+[10.074s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/msg/_pb_joint_command.py
+[10.074s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/msg/__init__.py
+[10.074s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/msg/_pb_endpoint_s.c
+[10.074s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/msg/_pb_joint_angles_s.c
+[10.075s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/msg/_pb_joint_command_s.c
+[10.075s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/parallelbot_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[10.075s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/__init__.py
+[10.075s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/_parallelbot_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[10.075s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/_parallelbot_interfaces_s.ep.rosidl_typesupport_c.c
+[10.076s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/parallelbot_interfaces_s__rosidl_typesupport_introspection_c.so
+[10.076s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/_parallelbot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[10.076s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/parallelbot_interfaces_s__rosidl_typesupport_c.so
+[10.129s] Listing '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces'...
+[10.129s] Compiling '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/__init__.py'...
+[10.129s] Listing '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/msg'...
+[10.129s] Compiling '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/msg/__init__.py'...
+[10.129s] Compiling '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/msg/_pb_endpoint.py'...
+[10.129s] Compiling '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/msg/_pb_joint_angles.py'...
+[10.129s] Compiling '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/msg/_pb_joint_command.py'...
+[10.135s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/parallelbot_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[10.135s] -- Set non-toolchain portion of runtime path of "/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/parallelbot_interfaces_s__rosidl_typesupport_fastrtps_c.so" to ""
+[10.135s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/parallelbot_interfaces_s__rosidl_typesupport_introspection_c.so
+[10.136s] -- Set non-toolchain portion of runtime path of "/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/parallelbot_interfaces_s__rosidl_typesupport_introspection_c.so" to ""
+[10.136s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/parallelbot_interfaces_s__rosidl_typesupport_c.so
+[10.136s] -- Set non-toolchain portion of runtime path of "/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages/parallelbot_interfaces/parallelbot_interfaces_s__rosidl_typesupport_c.so" to ""
+[10.137s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/libparallelbot_interfaces__rosidl_generator_py.so
+[10.137s] -- Set non-toolchain portion of runtime path of "/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/libparallelbot_interfaces__rosidl_generator_py.so" to ""
+[10.137s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/msg/PBJointAngles.idl
+[10.137s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/msg/PBEndpoint.idl
+[10.137s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/msg/PBJointCommand.idl
+[10.138s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/msg/PBJointAngles.msg
+[10.138s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/msg/PBEndpoint.msg
+[10.138s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/msg/PBJointCommand.msg
+[10.138s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/ament_index/resource_index/package_run_dependencies/parallelbot_interfaces
+[10.139s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/ament_index/resource_index/parent_prefix_path/parallelbot_interfaces
+[10.139s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/environment/ament_prefix_path.sh
+[10.139s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/environment/ament_prefix_path.dsv
+[10.139s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/environment/path.sh
+[10.139s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/environment/path.dsv
+[10.139s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/local_setup.bash
+[10.140s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/local_setup.sh
+[10.140s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/local_setup.zsh
+[10.140s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/local_setup.dsv
+[10.140s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/package.dsv
+[10.140s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/ament_index/resource_index/packages/parallelbot_interfaces
+[10.141s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/export_parallelbot_interfaces__rosidl_generator_cExport.cmake
+[10.141s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/export_parallelbot_interfaces__rosidl_generator_cExport-noconfig.cmake
+[10.141s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/export_parallelbot_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[10.141s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/export_parallelbot_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[10.142s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/export_parallelbot_interfaces__rosidl_generator_cppExport.cmake
+[10.142s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/export_parallelbot_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[10.142s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/export_parallelbot_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[10.142s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/parallelbot_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[10.143s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/parallelbot_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[10.143s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/parallelbot_interfaces__rosidl_typesupport_cExport.cmake
+[10.143s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/parallelbot_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[10.143s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/parallelbot_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[10.143s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/parallelbot_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[10.144s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/parallelbot_interfaces__rosidl_typesupport_cppExport.cmake
+[10.144s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/parallelbot_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[10.144s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/export_parallelbot_interfaces__rosidl_generator_pyExport.cmake
+[10.145s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/export_parallelbot_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[10.145s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/rosidl_cmake-extras.cmake
+[10.145s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[10.145s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[10.146s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[10.146s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[10.146s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[10.147s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[10.147s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/parallelbot_interfacesConfig.cmake
+[10.147s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/cmake/parallelbot_interfacesConfig-version.cmake
+[10.147s] -- Installing: /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/package.xml
+[10.152s] Invoked command in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot:/opt/ros/jazzy /usr/bin/cmake --install /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces

@@ -17,7 +17,7 @@ import numpy as np
 #  _| __\
 
 # select test case, otherwise, manually define values
-configuration=4
+configuration=5
 
 
 def loadconfig(selection):
@@ -57,6 +57,13 @@ def loadconfig(selection):
         E=sqrt(8)
         # theta1=45
         # theta2=45
+    if selection ==5:
+        L1=55
+        L2=90
+        R1=55
+        R2=140
+        b=50
+        E=30
 
 
     return L1,L2,R1,R2,b,E
@@ -118,8 +125,8 @@ def calc_FK(theta1, theta2, L1, L2, R1, R2, E, b):
     return link1x, link1y, link2x, link2y, link3x, link3y, link4x, link4y
 
 # first theta1 moves from 0 to 90, then theta2 moves from 0 to 90
-theta1=45
-theta2=45
+theta1=76
+theta2=40
 
 # initialize the links and lines
 link1x, link1y, link2x, link2y, link3x, link3y, link4x, link4y=calc_FK(theta1, theta2, L1, L2, R1, R2, E, b)

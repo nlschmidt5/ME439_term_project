@@ -1,9 +1,9 @@
 /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages/parallelbot/PB_kinematics.py
-/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages/parallelbot/PB_servo_cmd.py
 /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages/parallelbot/__init__.py
+/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages/parallelbot/ServoCommander.py
 /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages/parallelbot/__pycache__/PB_kinematics.cpython-312.pyc
-/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages/parallelbot/__pycache__/PB_servo_cmd.cpython-312.pyc
 /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages/parallelbot/__pycache__/__init__.cpython-312.pyc
+/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages/parallelbot/__pycache__/ServoCommander.cpython-312.pyc
 /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/share/ament_index/resource_index/packages/parallelbot
 /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/share/parallelbot/package.xml
 /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/share/parallelbot/launch
@@ -17,3 +17,4 @@
 /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages/parallelbot-0.0.0-py3.12.egg-info/top_level.txt
 /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages/parallelbot-0.0.0-py3.12.egg-info/entry_points.txt
 /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/parallelbot/PB_kinematics
+/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/parallelbot/ServoCommander

@@ -28,7 +28,10 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-        'PB_kinematics=parallelbot.PB_kinematics:main'
+        'PB_kinematics=parallelbot.PB_kinematics:main',
+        'ServoCommander=parallelbot.ServoCommander:main',
+        'servo_executor=parallelbot.Servo_Executor:main',
+        'Define_Path=parallelbot.Define_Path:main'
         ],
     },
 )
