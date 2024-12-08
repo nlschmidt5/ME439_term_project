@@ -10,13 +10,13 @@ config=5
 t=np.linspace(0, 2*np.pi, 90)
 
 # draw a circle
-name="circle.gif"
-x=20*np.cos(t)-20
-y=20*np.sin(t)+140
+# name="circle.gif"
+# x=20*np.cos(t)-20
+# y=20*np.sin(t)+140
 
-# name="line.gif"
-# x=np.hstack((np.linspace(-45, -45, 20), np.linspace(-45, -45, 20) ))
-# y=np.hstack((np.linspace(40, 160, 20), np.linspace(160, 40, 20) ))
+name="line.gif"
+x=np.hstack((np.linspace(-45, -45, 60), np.linspace(-45, -45, 60) ))
+y=np.hstack((np.linspace(40, 160, 60), np.linspace(160, 40, 60) ))
 
 # can define your own trajectory here
 # x=np.hstack((np.linspace(-45, 100, 60), np.linspace(100, -45, 60) ))
@@ -65,4 +65,5 @@ def animate_arm(fig, animate_fun, theta1):
 # initialize the animation, and animate
 fig, ax, link1, link2, link3, link4 = init_animation(theta1, theta2, config)
 ani=animate_arm(fig, animate_fun, theta1)
+plt.plot(x, y)
 ani.save(filename=name, writer="pillow")
