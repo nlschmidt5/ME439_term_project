@@ -28,6 +28,10 @@ class Define_Path(Node):
         self.counter=0
         self.resolution=40
         self.timer = self.create_timer(1/self.timerfrequency, self.follow_path)
+        self.qi=np.matrix([[-45],[40]])
+        self.qg=np.matrix([[40],[140]])
+        self.shortest_x=self.init_shortest()
+        self.shortest_y=self.init_shortest()
 
 
     def follow_path(self):
@@ -56,14 +60,15 @@ class Define_Path(Node):
         return x[self.counter], y[self.counter]
     
     def shortest(self):
-        # define start and end here
-        qi=np.matrix([[-45],[40]])
-        qg=np.matrix([[40],[140]])
+        return self.shortest_x[self.counter], self.shortest_y[self.counter]
 
+    
+    def init_shortest(self):
+        # define start and end here
         K=10
         n=400
         obstacle_stack=1 #placeholder
-        path=self.PRM(qi,qg,n,K,obstacle_stack)
+        path=self.PRM(self.qi,self.qg,n,K,obstacle_stack)
 
         x=path[0,:].A1
         y=path[1,:].A1
