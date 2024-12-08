@@ -125,8 +125,8 @@ def calc_FK(theta1, theta2, L1, L2, R1, R2, E, b):
     return link1x, link1y, link2x, link2y, link3x, link3y, link4x, link4y
 
 # first theta1 moves from 0 to 90, then theta2 moves from 0 to 90
-theta1=10
-theta2=0
+theta1=76
+theta2=40
 
 # initialize the links and lines
 link1x, link1y, link2x, link2y, link3x, link3y, link4x, link4y=calc_FK(theta1, theta2, L1, L2, R1, R2, E, b)

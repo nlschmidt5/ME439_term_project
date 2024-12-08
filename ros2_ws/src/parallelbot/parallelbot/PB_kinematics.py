@@ -4,6 +4,7 @@ import numpy as np
 import traceback
 from math import atan2, acos, asin, sin, cos, tan, sqrt, pi
 from parallelbot_interfaces.msg import PBEndpoint, PBJointAngles
+import heapq
 
 class PB_kinematics(Node): 
     def __init__(self):
@@ -142,10 +143,6 @@ class PB_kinematics(Node):
             self.get_logger().error(traceback.format_exc())
 
     
-    
-
-
-
 
 
 def main(args=None):
