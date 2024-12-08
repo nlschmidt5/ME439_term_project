@@ -38,15 +38,15 @@ class Define_Path(Node):
 
     def follow_path(self):
         # quick and dirty way to define a path
+
         # x, y=self.line()
         #x, y=self.cirlce(self)
+        if self.counter>=len(self.shortest_x):
+            self.counter=0
         x, y=self.shortest()
-
         self.endpoint.xy=[x, y]
-        self.counter=self.counter+1
-        if self.counter>self.resolution:
-            self.timer=0
         self.pub_endpoint.publish(self.endpoint)
+        self.counter+=1
         
 
     
@@ -77,7 +77,9 @@ class Define_Path(Node):
         resolution=10
         self.get_logger().info("path found")
         x_smooth, y_smooth=self.smooth_path(x, y, resolution)
-        return x_smooth, y_smooth
+        x_smooth_out=np.hstack((x_smooth, np.flip(x_smooth)))
+        y_smooth_out=np.hstack((y_smooth, np.flip(y_smooth)))
+        return x_smooth_out, y_smooth_out
 
     def PRM(self, qI,qG,num_sample,K,obstacle_stack):
     # qI: initial configuration (x-y coords)
