@@ -31,7 +31,8 @@ setup(
         'PB_kinematics=parallelbot.PB_kinematics:main',
         'ServoCommander=parallelbot.ServoCommander:main',
         'servo_executor=parallelbot.Servo_Executor:main',
-        'Define_Path=parallelbot.Define_Path:main'
+        'Define_Path=parallelbot.Define_Path:main',
+        'Circle=parallelbot.Circle:main'
         ],
     },
 )

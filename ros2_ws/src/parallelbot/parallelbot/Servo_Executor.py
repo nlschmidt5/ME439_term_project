@@ -86,8 +86,8 @@ class Servo_Executor(Node):
         # unpack the command
         th1 = joint_angles.th1
         th2 = joint_angles.th2
-        cmd1=int(500 + (th1/ np.pi) * 2000) # convert from rad to pulse width (us)
-        cmd2=int(500 + (th2/ np.pi) * 2000)
+        cmd1=int(500 + ((np.pi-th1)/ np.pi) * 2000) # convert from rad to pulse width (us)
+        cmd2=int(500 + ((np.pi-th2)/ np.pi) * 2000)
         self.servos.command_servo(0,cmd1)
         self.servos.command_servo(1,cmd2)
         self.get_logger().info("sent command to servo_0 cmd: "+ str(cmd1))
