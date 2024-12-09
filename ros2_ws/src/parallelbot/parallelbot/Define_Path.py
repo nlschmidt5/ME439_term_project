@@ -2,6 +2,7 @@ import rclpy
 from rclpy.node import Node 
 import numpy as np
 import traceback
+from math import atan2, acos, asin, sin, cos, tan, sqrt, pi
 from parallelbot_interfaces.msg import PBEndpoint, PBJointAngles
 import heapq
 
@@ -30,21 +31,22 @@ class Define_Path(Node):
         self.timer = self.create_timer(1/self.timerfrequency, self.follow_path)
         self.qi=np.matrix([[-45],[40]])
         self.qg=np.matrix([[40],[140]])
-        self.shortest_x=self.init_shortest()
-        self.shortest_y=self.init_shortest()
+        self.shortest_x=np.array([])
+        self.shortest_y=np.array([])
+        self.shortest_x, self.shortest_y= self.init_shortest()
 
 
     def follow_path(self):
         # quick and dirty way to define a path
+
         # x, y=self.line()
         #x, y=self.cirlce(self)
+        if self.counter>=len(self.shortest_x):
+            self.counter=0
         x, y=self.shortest()
-
         self.endpoint.xy=[x, y]
-        self.counter=self.counter+1
-        if self.counter>self.resolution:
-            self.timer=0
         self.pub_endpoint.publish(self.endpoint)
+        self.counter+=1
         
 
     
@@ -64,7 +66,7 @@ class Define_Path(Node):
 
     
     def init_shortest(self):
-        # define start and end here
+        self.get_logger().info("finding shortest path")
         K=10
         n=400
         obstacle_stack=1 #placeholder
@@ -73,8 +75,11 @@ class Define_Path(Node):
         x=path[0,:].A1
         y=path[1,:].A1
         resolution=10
+        self.get_logger().info("path found")
         x_smooth, y_smooth=self.smooth_path(x, y, resolution)
-        return x_smooth, y_smooth
+        x_smooth_out=np.hstack((x_smooth, np.flip(x_smooth)))
+        y_smooth_out=np.hstack((y_smooth, np.flip(y_smooth)))
+        return x_smooth_out, y_smooth_out
 
     def PRM(self, qI,qG,num_sample,K,obstacle_stack):
     # qI: initial configuration (x-y coords)
@@ -137,9 +142,11 @@ class Define_Path(Node):
                 theta1, theta2=self.calc_IK(x,y)
                 # theta1_out=wrap_angle(theta1, "deg")
                 # theta2_out=wrap_angle(theta2, "deg")
+                self.get_logger().info("random point found")
                 validpoint=True
             except: 
                 validpoint=False
+                self.get_logger().info("point failed "+ str(i)+ ", trying again")
         return x, y
 
     def calculate_distance(self, x1, y1, x2, y2):
@@ -168,6 +175,7 @@ class Define_Path(Node):
         distances : ndarray
             Distances to the nearest vertices.
         """
+        self.get_logger().info("finding neighbors")
         neighbors = np.matrix([[],[]])
         neighbors_id = np.array([])
         distances = np.array([])
@@ -215,6 +223,7 @@ class Define_Path(Node):
                 - shortest_distance: The shortest distance from start to end
                 - path: A list of nodes representing the shortest path from start to end
         """
+        self.get_logger().info("starting dijkstra")
         num_nodes = graph.shape[0]
         
         # Priority queue for maintaining the min-heap of distances
@@ -272,13 +281,60 @@ class Define_Path(Node):
         return False
 
     def smooth_path(self, x, y, resolution):
+        self.get_logger().info("smoothing the path")
         x_smooth=np.array([x[0]])
         y_smooth=np.array([y[0]])
         for i in range(1, len(x)):
             x_smooth=np.hstack((x_smooth, np.linspace(x_smooth[-1], x[i], resolution)))
             y_smooth=np.hstack((y_smooth, np.linspace(y_smooth[-1], y[i], resolution)))
+        
         return x_smooth, y_smooth
+    
+    def calc_IK(self, x, y):
+        L1=self.L1
+        L2=self.L2
+        R1=self.R1
+        R2=self.R2
+        E=self.E
+        b=self.b
 
+        
+        try: 
+            # find theta2 first
+            A2=x-b
+            B2=y
+            C2=-1/(2*R1)*(x**2 + y**2 + b**2 + R1**2 - R2**2 -E**2 - 2*x*b - 2*R2*E)
+            theta2=2*atan2( (-B2+sqrt(B2**2-(C2-A2)*(A2+C2))) , (C2-A2) ) 
+        except:
+            self.get_logger().info("IK Failed at theta2: Check to see if point is beyond workspace")
+        
+        try:
+            # calculate theta4
+            theta4=acos(1/(R2+E)*(x-b-R1*cos(theta2)))
+        except:
+            self.get_logger().info("IK Failed at theta4: Check to see if point is beyond workspace")
+
+        try: 
+
+            # find theta1
+            A1=2*L1*E*cos(theta4)-2*x*L1
+            B1=2*L1*E*sin(theta4)-2*y*L1
+            C1=x**2 + y**2 + L1**2 - L2**2 + E**2 - 2*x*E*cos(theta4)-2*y*E*sin(theta4)
+            theta1=2*atan2( (-B1-sqrt(B1**2-(C1-A1)*(A1+C1))) , (C1-A1) ) 
+        except:
+            self.get_logger().info("IK Failed at theta1: Check to see if point is beyond workspace")
+
+        try: 
+            # find theta3 for completeness
+            theta3=acos(1/L2*(x-L1*cos(theta1)-E*cos(theta4)))
+        except:
+            self.get_logger().info("IK Failed at theta3: Check to see if point is beyond workspace")
+
+        try:
+            # return the angles
+            return theta1, theta2
+        except:
+            self.get_logger().info("IK failed.")
     
 
 
