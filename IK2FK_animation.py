@@ -10,13 +10,13 @@ config=5
 t=np.linspace(0, 2*np.pi, 90)
 
 # draw a circle
-name="circle.gif"
-x=20*np.cos(t)-20
-y=20*np.sin(t)+140
+# name="circle.gif"
+# x=20*np.cos(t)-20
+# y=20*np.sin(t)+140
 
-# name="line.gif"
-# x=np.hstack((np.linspace(-45, -45, 60), np.linspace(-45, -45, 60) ))
-# y=np.hstack((np.linspace(40, 160, 60), np.linspace(160, 40, 60) ))
+name="line.gif"
+x=np.hstack((np.linspace(-45, -45, 60), np.linspace(-45, -45, 60) ))
+y=np.hstack((np.linspace(40, 160, 60), np.linspace(160, 40, 60) ))
 
 # can define your own trajectory here
 # x=np.hstack((np.linspace(-45, 100, 60), np.linspace(100, -45, 60) ))
@@ -40,6 +40,7 @@ def init_animation(theta1, theta2, config):
     fig, ax = plt.subplots()
     # make sure limits are set to see the whole robot.
     ax.set(xlim=[-100, 150], ylim=[-50, 200], xlabel='x (mm)', ylabel='y (mm)')
+    ax.set_aspect(1)
     link1x, link1y, link2x, link2y, link3x, link3y, link4x, link4y=pbm.calc_FK(theta1[0], theta2[0], config)
     link1=ax.plot(link1x[0], link1y[0])[0]
     link2=ax.plot(link2x[0], link2y[0])[0]

@@ -1,0 +1,185 @@
+[0.245s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.245s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x78afa9932090>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x78afa9931f70>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x78afa9931f70>>)
+[0.315s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.315s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.316s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.316s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.316s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.316s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.316s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(src/parallelbot) by extensions ['ignore', 'ignore_ament_install']
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(src/parallelbot) by extension 'ignore'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(src/parallelbot) by extension 'ignore_ament_install'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(src/parallelbot) by extensions ['colcon_pkg']
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(src/parallelbot) by extension 'colcon_pkg'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(src/parallelbot) by extensions ['colcon_meta']
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(src/parallelbot) by extension 'colcon_meta'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(src/parallelbot) by extensions ['ros']
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(src/parallelbot) by extension 'ros'
+[0.359s] DEBUG:colcon.colcon_core.package_identification:Package 'src/parallelbot' with type 'ros.ament_python' and name 'parallelbot'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/parallelbot_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/parallelbot_interfaces) by extension 'ignore'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/parallelbot_interfaces) by extension 'ignore_ament_install'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/parallelbot_interfaces) by extensions ['colcon_pkg']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/parallelbot_interfaces) by extension 'colcon_pkg'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/parallelbot_interfaces) by extensions ['colcon_meta']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/parallelbot_interfaces) by extension 'colcon_meta'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/parallelbot_interfaces) by extensions ['ros']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/parallelbot_interfaces) by extension 'ros'
+[0.362s] DEBUG:colcon.colcon_core.package_identification:Package 'src/parallelbot_interfaces' with type 'ros.ament_cmake' and name 'parallelbot_interfaces'
+[0.362s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.362s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.362s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.362s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.362s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'parallelbot_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'parallelbot_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'parallelbot_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'parallelbot_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'parallelbot_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'parallelbot_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'parallelbot_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'parallelbot_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'parallelbot_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.390s] DEBUG:colcon.colcon_core.verb:Building package 'parallelbot_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces', 'merge_install': False, 'path': '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'parallelbot' build argument 'cmake_args' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'parallelbot' build argument 'cmake_target' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'parallelbot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'parallelbot' build argument 'cmake_clean_cache' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'parallelbot' build argument 'cmake_clean_first' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'parallelbot' build argument 'cmake_force_configure' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'parallelbot' build argument 'ament_cmake_args' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'parallelbot' build argument 'catkin_cmake_args' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'parallelbot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.391s] DEBUG:colcon.colcon_core.verb:Building package 'parallelbot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot', 'merge_install': False, 'path': '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot', 'symlink_install': False, 'test_result_base': None}
+[0.391s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.392s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.392s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot_interfaces' with build type 'ament_cmake'
+[0.392s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot_interfaces'
+[0.396s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.396s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.410s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces -- -j8 -l8
+[1.035s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces -- -j8 -l8
+[1.148s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces
+[1.259s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(parallelbot_interfaces)
+[1.260s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot_interfaces
+[1.263s] Level 1:colcon.colcon_core.environment:checking '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces' for CMake module files
+[1.265s] Level 1:colcon.colcon_core.environment:checking '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces' for CMake config files
+[1.266s] Level 1:colcon.colcon_core.shell:create_environment_hook('parallelbot_interfaces', 'cmake_prefix_path')
+[1.266s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/hook/cmake_prefix_path.dsv'
+[1.267s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/hook/cmake_prefix_path.sh'
+[1.268s] Level 1:colcon.colcon_core.environment:checking '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib'
+[1.268s] Level 1:colcon.colcon_core.shell:create_environment_hook('parallelbot_interfaces', 'ld_library_path_lib')
+[1.269s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/hook/ld_library_path_lib.dsv'
+[1.269s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/hook/ld_library_path_lib.sh'
+[1.270s] Level 1:colcon.colcon_core.environment:checking '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/bin'
+[1.270s] Level 1:colcon.colcon_core.environment:checking '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/pkgconfig/parallelbot_interfaces.pc'
+[1.272s] Level 1:colcon.colcon_core.environment:checking '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages'
+[1.272s] Level 1:colcon.colcon_core.shell:create_environment_hook('parallelbot_interfaces', 'pythonpath')
+[1.273s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/hook/pythonpath.dsv'
+[1.273s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/hook/pythonpath.sh'
+[1.274s] Level 1:colcon.colcon_core.environment:checking '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/bin'
+[1.274s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/package.dsv'
+[1.275s] INFO:colcon.colcon_core.shell:Creating package script '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/package.sh'
+[1.276s] INFO:colcon.colcon_core.shell:Creating package script '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/package.bash'
+[1.276s] INFO:colcon.colcon_core.shell:Creating package script '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/package.zsh'
+[1.277s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/colcon-core/packages/parallelbot_interfaces)
+[1.366s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(parallelbot_interfaces)
+[1.366s] Level 1:colcon.colcon_core.environment:checking '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces' for CMake module files
+[1.367s] Level 1:colcon.colcon_core.environment:checking '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces' for CMake config files
+[1.368s] Level 1:colcon.colcon_core.shell:create_environment_hook('parallelbot_interfaces', 'cmake_prefix_path')
+[1.368s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/hook/cmake_prefix_path.dsv'
+[1.368s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/hook/cmake_prefix_path.sh'
+[1.369s] Level 1:colcon.colcon_core.environment:checking '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib'
+[1.369s] Level 1:colcon.colcon_core.shell:create_environment_hook('parallelbot_interfaces', 'ld_library_path_lib')
+[1.369s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/hook/ld_library_path_lib.dsv'
+[1.369s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/hook/ld_library_path_lib.sh'
+[1.369s] Level 1:colcon.colcon_core.environment:checking '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/bin'
+[1.370s] Level 1:colcon.colcon_core.environment:checking '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/pkgconfig/parallelbot_interfaces.pc'
+[1.370s] Level 1:colcon.colcon_core.environment:checking '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages'
+[1.370s] Level 1:colcon.colcon_core.shell:create_environment_hook('parallelbot_interfaces', 'pythonpath')
+[1.370s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/hook/pythonpath.dsv'
+[1.370s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/hook/pythonpath.sh'
+[1.371s] Level 1:colcon.colcon_core.environment:checking '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/bin'
+[1.371s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/package.dsv'
+[1.372s] INFO:colcon.colcon_core.shell:Creating package script '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/package.sh'
+[1.372s] INFO:colcon.colcon_core.shell:Creating package script '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/package.bash'
+[1.372s] INFO:colcon.colcon_core.shell:Creating package script '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/parallelbot_interfaces/package.zsh'
+[1.373s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/share/colcon-core/packages/parallelbot_interfaces)
+[1.373s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot' with build type 'ament_python'
+[1.373s] Level 1:colcon.colcon_core.shell:create_environment_hook('parallelbot', 'ament_prefix_path')
+[1.373s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/share/parallelbot/hook/ament_prefix_path.dsv'
+[1.375s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/share/parallelbot/hook/ament_prefix_path.sh'
+[1.375s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.666s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot'
+[1.666s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.562s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot': AMENT_PREFIX_PATH=/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages:/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/parallelbot build --build-base /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot/build install --record /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot/install.log --single-version-externally-managed install_data
+[3.336s] Level 1:colcon.colcon_core.environment:checking '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot' for CMake module files
+[3.336s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/src/parallelbot' returned '0': AMENT_PREFIX_PATH=/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages:/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/parallelbot build --build-base /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot/build install --record /home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/build/parallelbot/install.log --single-version-externally-managed install_data
+[3.337s] Level 1:colcon.colcon_core.environment:checking '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot' for CMake config files
+[3.339s] Level 1:colcon.colcon_core.environment:checking '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib'
+[3.339s] Level 1:colcon.colcon_core.environment:checking '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/bin'
+[3.339s] Level 1:colcon.colcon_core.environment:checking '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/pkgconfig/parallelbot.pc'
+[3.339s] Level 1:colcon.colcon_core.environment:checking '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/lib/python3.12/site-packages'
+[3.339s] Level 1:colcon.colcon_core.shell:create_environment_hook('parallelbot', 'pythonpath')
+[3.339s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/share/parallelbot/hook/pythonpath.dsv'
+[3.340s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/share/parallelbot/hook/pythonpath.sh'
+[3.341s] Level 1:colcon.colcon_core.environment:checking '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/bin'
+[3.341s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(parallelbot)
+[3.341s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/share/parallelbot/package.dsv'
+[3.341s] INFO:colcon.colcon_core.shell:Creating package script '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/share/parallelbot/package.sh'
+[3.342s] INFO:colcon.colcon_core.shell:Creating package script '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/share/parallelbot/package.bash'
+[3.342s] INFO:colcon.colcon_core.shell:Creating package script '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/share/parallelbot/package.zsh'
+[3.342s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/parallelbot/share/colcon-core/packages/parallelbot)
+[3.343s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.343s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.343s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[3.343s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.351s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.351s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.351s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.355s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.356s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/local_setup.sh'
+[3.357s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/_local_setup_util_sh.py'
+[3.360s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/setup.sh'
+[3.361s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/local_setup.bash'
+[3.362s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/setup.bash'
+[3.363s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/local_setup.zsh'
+[3.364s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/noah/Documents/Grad/Coursework/RoboticsProject/ME439_term_project/ros2_ws/install/setup.zsh'

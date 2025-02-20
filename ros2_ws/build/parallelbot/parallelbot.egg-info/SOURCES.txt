@@ -9,8 +9,11 @@ setup.py
 ../../build/parallelbot/parallelbot.egg-info/requires.txt
 ../../build/parallelbot/parallelbot.egg-info/top_level.txt
 ../../build/parallelbot/parallelbot.egg-info/zip-safe
+parallelbot/Circle.py
+parallelbot/Define_Path.py
 parallelbot/PB_kinematics.py
 parallelbot/ServoCommander.py
+parallelbot/Servo_Executor.py
 parallelbot/__init__.py
 resource/parallelbot
 test/test_copyright.py
