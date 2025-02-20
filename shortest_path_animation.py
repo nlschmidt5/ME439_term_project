@@ -47,6 +47,7 @@ def init_animation(theta1, theta2, config):
     fig, ax = plt.subplots()
     # make sure limits are set to see the whole robot.
     ax.set(xlim=[-100, 150], ylim=[-50, 200], xlabel='x (mm)', ylabel='y (mm)')
+    ax.set_aspect(1)
     link1x, link1y, link2x, link2y, link3x, link3y, link4x, link4y=pbm.calc_FK(theta1[0], theta2[0], config)
     link1=ax.plot(link1x[0], link1y[0])[0]
     link2=ax.plot(link2x[0], link2y[0])[0]

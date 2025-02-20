@@ -1,3 +1,6 @@
 [console_scripts]
+Circle = parallelbot.Circle:main
+Define_Path = parallelbot.Define_Path:main
 PB_kinematics = parallelbot.PB_kinematics:main
 ServoCommander = parallelbot.ServoCommander:main
+servo_executor = parallelbot.Servo_Executor:main

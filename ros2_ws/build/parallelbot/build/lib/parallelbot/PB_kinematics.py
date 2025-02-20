@@ -4,6 +4,7 @@ import numpy as np
 import traceback
 from math import atan2, acos, asin, sin, cos, tan, sqrt, pi
 from parallelbot_interfaces.msg import PBEndpoint, PBJointAngles
+import heapq
 
 class PB_kinematics(Node): 
     def __init__(self):
@@ -28,12 +29,40 @@ class PB_kinematics(Node):
         self.theta=PBJointAngles()
         self.endpoint=PBEndpoint()
 
-    def calc_FK(self, theta):
+    def limit_joint_angle(self, angle, unit):
+        # takes in an angle between 0 and 360, 
+        # returns an angle between 0 and 180
+        if unit=="deg":
+            if angle>180 and angle<270:
+                angle_out=180.
+            elif angle<0 or angle>270:
+                angle_out=0.
+            else:
+                angle_out=angle
+        if unit=="rad":
+            if angle>np.pi and angle<3*np.pi/2:
+                angle_out=np.pi
+            elif angle<0 or angle>3*np.pi/2:
+                angle_out=0.
+            else:
+                angle_out=angle
+        return angle_out
 
-        # takes in robot parameters and joint angles (in degrees), 
-        # returns links start and end locations for plotting purposes
-        theta1=theta.th1
-        theta2=theta.th2
+    def wrap_angle(self, angle, unit):
+        # returns an angle between 0 and 360, or 0 and 2pi
+        if unit=="deg":
+            angle_out=angle%360
+            return angle_out
+        if unit=="rad":
+            angle_out=angle%(2*np.pi)
+            return angle_out
+
+        
+    def calc_FK(self, theta):
+        # takes in robot parameters and joint angles (in radians), 
+        # returns an endpoint
+        theta1=self.limit_joint_angle(theta.th1, "rad")
+        theta2=self.limit_joint_angle(theta.th2, "rad")
         L1=self.L1
         L2=self.L2
         R1=self.R1
@@ -100,8 +129,16 @@ class PB_kinematics(Node):
             self.get_logger().info("IK Failed at theta3: Check to see if point is beyond workspace")
 
         try: 
-            self.theta.th1=theta1
-            self.theta.th2=theta2
+            # wrap angles to be between 0 and 2pi
+            theta1_wrapped=self.wrap_angle( theta1, "rad" )
+            theta2_wrapped=self.wrap_angle( theta2, "rad" )
+            # limit joint angles to between 0 and pi
+            theta1_out=self.limit_joint_angle( theta1_wrapped, "rad" )
+            theta2_out=self.limit_joint_angle( theta2_wrapped, "rad" )
+
+            # package the message
+            self.theta.th1=theta1_out
+            self.theta.th2=theta2_out
             self.theta.th3=theta3
             self.theta.th4=theta4
             self.pub_IK.publish(self.theta)
@@ -110,6 +147,8 @@ class PB_kinematics(Node):
         except:
             self.get_logger().info("Failed to publish angles.")
             self.get_logger().error(traceback.format_exc())
+
+    
 
 
 def main(args=None):

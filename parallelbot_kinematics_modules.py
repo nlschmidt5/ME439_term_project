@@ -276,8 +276,6 @@ def get_random_position(params):
         # see if it is in the workspace
         try: 
             theta1, theta2=calc_IK(x,y,params)
-            # theta1_out=wrap_angle(theta1, "deg")
-            # theta2_out=wrap_angle(theta2, "deg")
             validpoint=True
             print("successful point found")
         except: 

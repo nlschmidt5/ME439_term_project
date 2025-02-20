@@ -19,31 +19,29 @@ from std_msgs.msg import Float32MultiArray
 from rclpy.executors import MultiThreadedExecutor
 import traceback 
 import pigpio
+from parallelbot_interfaces.msg import PBEndpoint, PBJointAngles
+
 
 class ServoCommander(Node):
     def __init__(self):
-        super().__init__('servo_controller')
+        super().__init__('ServoCommander')
         self.publisher_ = self.create_publisher(Float32MultiArray, 'servo_states', 10)
-        self.subscription = self.create_subscription(
-            Float32MultiArray,
-            'servo_commands',
-            self.listener_callback,
-            10
-        )
+        self.subscription = self.create_subscription(PBJointAngles,'joint_angles',self.listener_callback,1)
         self.pi = pigpio.pi()
         self.servos = [17, 18]  # GPIO pins where servos are connected
         self.servo_positions = [90, 90]  # Initial positions
 
     def listener_callback(self, msg):
-        if len(msg.data) == len(self.servos):
-            for i in range(len(self.servos)):
-                angle = msg.data[i]
-                self.set_servo_angle(self.servos[i], angle)
-                self.servo_positions[i] = angle
-            self.publish_servo_positions()
+        th1 = msg.th1
+        th2 = msg.th2
+        self.set_servo_angle(self.servos[0], th1)
+        self.set_servo_angle(self.servos[1], th2)
+        self.servo_positions[0] = th1
+        self.servo_positions[1] = th2
+        self.publish_servo_positions()
 
     def set_servo_angle(self, gpio_pin, angle):
-        pulse_width = 500 + (angle / 180.0) * 2000  # Convert angle to pulse width
+        pulse_width = 500 + (angle / 360.) * 2000  # Convert angle to pulse width
         self.pi.set_servo_pulsewidth(gpio_pin, pulse_width)
 
     def publish_servo_positions(self):
